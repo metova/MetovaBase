@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4A11D77A1CCAEC3400E4C363 /* BaseCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */; };
-		4A11D78C1CCAF27800E4C363 /* BaseCamp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A11D78A1CCAF27800E4C363 /* BaseCamp.h */; };
-		4A11D78D1CCAF27800E4C363 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A11D78B1CCAF27800E4C363 /* Info.plist */; };
+		4A11D78C1CCAF27800E4C363 /* BaseCamp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A11D78A1CCAF27800E4C363 /* BaseCamp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */; };
+		4A38463C1CCAFA2A00B7A2B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */; };
+		4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */; };
+		4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */; };
+		4A3846461CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,10 @@
 		4A11D78A1CCAF27800E4C363 /* BaseCamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCamp.h; sourceTree = "<group>"; };
 		4A11D78B1CCAF27800E4C363 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCampTests.swift; sourceTree = "<group>"; };
+		4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationDelegate.swift; sourceTree = "<group>"; };
+		4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerConvenience.swift; sourceTree = "<group>"; };
+		4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4A11D78A1CCAF27800E4C363 /* BaseCamp.h */,
+				4A38463A1CCAFA0F00B7A2B6 /* BaseViewController */,
 				4A11D78B1CCAF27800E4C363 /* Info.plist */,
 			);
 			path = BaseCamp;
@@ -85,6 +93,17 @@
 				4A11D7801CCAEC3400E4C363 /* Info.plist */,
 			);
 			path = BaseCampTests;
+			sourceTree = "<group>";
+		};
+		4A38463A1CCAFA0F00B7A2B6 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */,
+				4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */,
+				4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */,
+				4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +165,8 @@
 		4A11D7641CCAEBB900E4C363 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				TargetAttributes = {
 					4A11D76E1CCAEC3400E4C363 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -180,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A11D78D1CCAF27800E4C363 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3846461CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift in Sources */,
+				4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */,
+				4A38463C1CCAFA2A00B7A2B6 /* BaseViewController.swift in Sources */,
+				4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +290,8 @@
 		4A11D7681CCAEBB900E4C363 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -494,6 +518,7 @@
 				4A11D7831CCAEC3400E4C363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +527,7 @@
 				4A11D7861CCAEC3400E4C363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
