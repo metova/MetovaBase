@@ -14,6 +14,7 @@
 		4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */; };
 		4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */; };
 		4A3846461CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */; };
+		4A3846481CCB143E00B7A2B6 /* BaseViewControllerFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationDelegate.swift; sourceTree = "<group>"; };
 		4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerConvenience.swift; sourceTree = "<group>"; };
 		4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboard.swift; sourceTree = "<group>"; };
+		4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFrames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */,
 				4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */,
 				4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */,
+				4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */,
 				4A38463C1CCAFA2A00B7A2B6 /* BaseViewController.swift in Sources */,
 				4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */,
+				4A3846481CCB143E00B7A2B6 /* BaseViewControllerFrames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +348,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = BaseCamp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -396,7 +400,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = BaseCamp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = metova.BaseCamp;

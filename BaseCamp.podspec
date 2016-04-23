@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license  = { :type => "MIT", :file => "LICENSE" }
   s.authors  = { "Nick Griffith" => "nick.griffith@metova.com" }
 
-  s.platform = :ios, '7.0'
+  s.platform = :ios, '8.0'
 
   s.source              = { :git => "http://github/metova/BaseCamp.git", :tag => s.version.to_s }
   s.source_files        = "BaseCamp", "BaseCamp/**/*.{h,m,swift}"
