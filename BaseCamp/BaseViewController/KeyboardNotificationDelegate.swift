@@ -9,10 +9,10 @@
 import Foundation
 
 @objc protocol KeyboardNotificationDelegate: class {
-    optional func keyboardWillShow(notification: NSNotification)
-    optional func keyboardDidShow(notification: NSNotification)
-    optional func keyboardWillChange(notification: NSNotification)
-    optional func keyboardDidChange(notification: NSNotification)
-    optional func keyboardWillHide(notification: NSNotification)
-    optional func keyboardDidHide(notification: NSNotification)
+    @objc optional func keyboardWillShow(notification: NSNotification)
+    @objc optional func keyboardDidShow(notification: NSNotification)
+    @objc optional func keyboardWillChange(notification: NSNotification)
+    @objc optional func keyboardDidChange(notification: NSNotification)
+    @objc optional func keyboardWillHide(notification: NSNotification)
+    @objc optional func keyboardDidHide(notification: NSNotification)
 }

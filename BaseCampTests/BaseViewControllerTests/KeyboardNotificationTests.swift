@@ -32,6 +32,64 @@ class KeyboardNotificationTests: XCTestCase {
         
         waitForExpectationsWithTimeout(0, handler: nil)
     }
+    
+    func testWillShowNotification() {
+        class WillShowMethodClass: BaseViewController {
+            
+            var expectation: XCTestExpectation?
+            
+            @objc func keyboardWillShow(notification: NSNotification) {
+                // TODO: Assert some things about the notification
+                expectation?.fulfill()
+            }
+        }
+        
+        expectationForNotification(UIKeyboardWillShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillHideNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidHideNotification, object: nil, handler: nil)
+        
+        BCTAssertNoException {
+            let testObject = WillShowMethodClass()
+            testObject.expectation = expectationWithDescription("Keyboard Will Show Called")
+            testObject.loadView()
+            testObject.viewDidLoad()
+            postKeyboardNotifications()
+        }
+        
+        waitForExpectationsWithTimeout(0, handler: nil)
+    }
+    
+    func testDidShowNotification() {
+        class DidShowMethodClass: BaseViewController {
+            
+            var expectation: XCTestExpectation?
+            
+            @objc func keyboardDidShow(notification: NSNotification) {
+                // TODO: Assert some things about the notification
+                expectation?.fulfill()
+            }
+        }
+        
+        expectationForNotification(UIKeyboardWillShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillHideNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidHideNotification, object: nil, handler: nil)
+        
+        BCTAssertNoException {
+            let testObject = DidShowMethodClass()
+            testObject.expectation = expectationWithDescription("Keyboard Did Show Called")
+            testObject.loadView()
+            testObject.viewDidLoad()
+            postKeyboardNotifications()
+        }
+        
+        waitForExpectationsWithTimeout(0, handler: nil)
+    }
 }
 
 private func postKeyboardNotifications() {
