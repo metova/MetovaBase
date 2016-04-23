@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A11D7791CCAEC3400E4C363 /* BaseCamp iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseCamp iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A11D7791CCAEC3400E4C363 /* BaseCamp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseCamp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A11D7801CCAEC3400E4C363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A11D78A1CCAF27800E4C363 /* BaseCamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCamp.h; sourceTree = "<group>"; };
 		4A11D78B1CCAF27800E4C363 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */,
-				4A11D7791CCAEC3400E4C363 /* BaseCamp iOSTests.xctest */,
+				4A11D7791CCAEC3400E4C363 /* BaseCamp-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A11D76E1CCAEC3400E4C363 /* BaseCamp iOS */ = {
+		4A11D76E1CCAEC3400E4C363 /* BaseCamp-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOS" */;
+			buildConfigurationList = 4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOS" */;
 			buildPhases = (
 				4A11D76A1CCAEC3400E4C363 /* Sources */,
 				4A11D76B1CCAEC3400E4C363 /* Frameworks */,
@@ -176,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = "BaseCamp iOS";
+			name = "BaseCamp-iOS";
 			productName = "BaseCamp iOS";
 			productReference = 4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4A11D7781CCAEC3400E4C363 /* BaseCamp iOSTests */ = {
+		4A11D7781CCAEC3400E4C363 /* BaseCamp-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOSTests" */;
+			buildConfigurationList = 4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOSTests" */;
 			buildPhases = (
 				4A11D7751CCAEC3400E4C363 /* Sources */,
 				4A11D7761CCAEC3400E4C363 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				4A11D77C1CCAEC3400E4C363 /* PBXTargetDependency */,
 			);
-			name = "BaseCamp iOSTests";
+			name = "BaseCamp-iOSTests";
 			productName = "BaseCamp iOSTests";
-			productReference = 4A11D7791CCAEC3400E4C363 /* BaseCamp iOSTests.xctest */;
+			productReference = 4A11D7791CCAEC3400E4C363 /* BaseCamp-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -228,8 +228,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A11D76E1CCAEC3400E4C363 /* BaseCamp iOS */,
-				4A11D7781CCAEC3400E4C363 /* BaseCamp iOSTests */,
+				4A11D76E1CCAEC3400E4C363 /* BaseCamp-iOS */,
+				4A11D7781CCAEC3400E4C363 /* BaseCamp-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* Begin PBXTargetDependency section */
 		4A11D77C1CCAEC3400E4C363 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4A11D76E1CCAEC3400E4C363 /* BaseCamp iOS */;
+			target = 4A11D76E1CCAEC3400E4C363 /* BaseCamp-iOS */;
 			targetProxy = 4A11D77B1CCAEC3400E4C363 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -557,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOS" */ = {
+		4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A11D7821CCAEC3400E4C363 /* Debug */,
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOSTests" */ = {
+		4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A11D7851CCAEC3400E4C363 /* Debug */,
