@@ -6,14 +6,14 @@ Pod::Spec.new do |s|
                    Useful subclasses to inherit from.
                    DESC
 
-  s.homepage     = "http://metova.com"
-  s.license      = 'MIT'
-  s.authors       = { "Nick Griffith" => "nick.griffith@metova.com" }
+  s.homepage = "http://metova.com"
+  s.license  = { :type => "MIT", :file => "LICENSE" }
+  s.authors  = { "Nick Griffith" => "nick.griffith@metova.com" }
 
-  s.platform     = :ios, '7.0'
+  s.platform = :ios, '7.0'
 
-  s.source       = { :git => "http://github/metova/BaseCamp.git", :tag => s.version.to_s }
-  s.source_files  = "BaseCamp", "BaseCamp/**/*.{h,m,swift}"
+  s.source              = { :git => "http://github/metova/BaseCamp.git", :tag => s.version.to_s }
+  s.source_files        = "BaseCamp", "BaseCamp/**/*.{h,m,swift}"
   s.public_header_files = 'BaseCamp/**/*.h'
-  s.exclude_files = "BaseCamp/Exclude"
+  s.exclude_files       = "BaseCamp/Exclude"
 end
