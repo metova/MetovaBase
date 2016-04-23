@@ -90,6 +90,35 @@ class KeyboardNotificationTests: XCTestCase {
         
         waitForExpectationsWithTimeout(0, handler: nil)
     }
+    
+    func testWillChangeNotification() {
+        class WillChangeMethodClass: BaseViewController {
+            
+            var expectation: XCTestExpectation?
+            
+            @objc func keyboardWillChange(notification: NSNotification) {
+                // TODO: Assert some things about the notification
+                expectation?.fulfill()
+            }
+        }
+        
+        expectationForNotification(UIKeyboardWillShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillHideNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidHideNotification, object: nil, handler: nil)
+        
+        BCTAssertNoException {
+            let testObject = WillChangeMethodClass()
+            testObject.expectation = expectationWithDescription("Keyboard Will Change Called")
+            testObject.loadView()
+            testObject.viewDidLoad()
+            postKeyboardNotifications()
+        }
+        
+        waitForExpectationsWithTimeout(0, handler: nil)
+    }
 }
 
 private func postKeyboardNotifications() {
