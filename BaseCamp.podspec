@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BaseCamp"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "A short description of BaseCamp."
   s.description  = <<-DESC
                    Useful subclasses to inherit from.

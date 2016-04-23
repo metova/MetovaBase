@@ -20,6 +20,11 @@
 		4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */; };
 		4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
 		4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */; };
+		4A8A5A451CCBE1D7005CB318 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A441CCBE1D7005CB318 /* README.md */; };
+		4A8A5A4A1CCBE275005CB318 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A461CCBE275005CB318 /* .gitignore */; };
+		4A8A5A4B1CCBE275005CB318 /* .slather.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A471CCBE275005CB318 /* .slather.yml */; };
+		4A8A5A4C1CCBE275005CB318 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A481CCBE275005CB318 /* .swiftlint.yml */; };
+		4A8A5A4D1CCBE275005CB318 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A491CCBE275005CB318 /* Gemfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,12 @@
 		4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationTests.swift; sourceTree = "<group>"; };
 		4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFramesTests.swift; sourceTree = "<group>"; };
 		4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		4A8A5A411CCBE10B005CB318 /* BaseCamp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseCamp.podspec; sourceTree = "<group>"; };
+		4A8A5A441CCBE1D7005CB318 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4A8A5A461CCBE275005CB318 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4A8A5A471CCBE275005CB318 /* .slather.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
+		4A8A5A481CCBE275005CB318 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		4A8A5A491CCBE275005CB318 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +86,7 @@
 		4A11D7631CCAEBB900E4C363 = {
 			isa = PBXGroup;
 			children = (
+				4A8A5A431CCBE133005CB318 /* BaseCampMetaData */,
 				4A11D7711CCAEC3400E4C363 /* BaseCamp */,
 				4A11D77D1CCAEC3400E4C363 /* BaseCampTests */,
 				4A11D7701CCAEC3400E4C363 /* Products */,
@@ -150,6 +162,19 @@
 				4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */,
 			);
 			path = BaseViewControllerTests;
+			sourceTree = "<group>";
+		};
+		4A8A5A431CCBE133005CB318 /* BaseCampMetaData */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A5A461CCBE275005CB318 /* .gitignore */,
+				4A8A5A471CCBE275005CB318 /* .slather.yml */,
+				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
+				4A8A5A491CCBE275005CB318 /* Gemfile */,
+				4A8A5A441CCBE1D7005CB318 /* README.md */,
+				4A8A5A411CCBE10B005CB318 /* BaseCamp.podspec */,
+			);
+			name = BaseCampMetaData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +277,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8A5A4D1CCBE275005CB318 /* Gemfile in Resources */,
+				4A8A5A4C1CCBE275005CB318 /* .swiftlint.yml in Resources */,
+				4A8A5A4A1CCBE275005CB318 /* .gitignore in Resources */,
+				4A8A5A4B1CCBE275005CB318 /* .slather.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +351,7 @@
 				4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */,
 				4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */,
 				4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */,
+				4A8A5A451CCBE1D7005CB318 /* README.md in Sources */,
 				4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */,
 				4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */,
 				4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */,
