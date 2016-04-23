@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4A11D77A1CCAEC3400E4C363 /* BaseCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */; };
 		4A11D78C1CCAF27800E4C363 /* BaseCamp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A11D78A1CCAF27800E4C363 /* BaseCamp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */; };
 		4A38463C1CCAFA2A00B7A2B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */; };
 		4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */; };
 		4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */; };
@@ -17,7 +16,7 @@
 		4A3846481CCB143E00B7A2B6 /* BaseViewControllerFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */; };
 		4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */; };
 		4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616291CCBB3D70048EA51 /* AssertNoException.swift */; };
-		4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */; };
+		4A66162E1CCBBAC50048EA51 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */; };
 		4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
 		4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */; };
 		4A8A5A451CCBE1D7005CB318 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A441CCBE1D7005CB318 /* README.md */; };
@@ -25,6 +24,8 @@
 		4A8A5A4B1CCBE275005CB318 /* .slather.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A471CCBE275005CB318 /* .slather.yml */; };
 		4A8A5A4C1CCBE275005CB318 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A481CCBE275005CB318 /* .swiftlint.yml */; };
 		4A8A5A4D1CCBE275005CB318 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A491CCBE275005CB318 /* Gemfile */; };
+		4A8A5A4F1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */; };
+		4A8A5A511CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		4A11D7801CCAEC3400E4C363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A11D78A1CCAF27800E4C363 /* BaseCamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCamp.h; sourceTree = "<group>"; };
 		4A11D78B1CCAF27800E4C363 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCampTests.swift; sourceTree = "<group>"; };
 		4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationDelegate.swift; sourceTree = "<group>"; };
 		4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerConvenience.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		4A6616241CCBA69A0048EA51 /* ObjectiveCTry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTry.h; sourceTree = "<group>"; };
 		4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTry.m; sourceTree = "<group>"; };
 		4A6616291CCBB3D70048EA51 /* AssertNoException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertNoException.swift; sourceTree = "<group>"; };
-		4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationTests.swift; sourceTree = "<group>"; };
+		4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboardNotificationTests.swift; sourceTree = "<group>"; };
 		4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFramesTests.swift; sourceTree = "<group>"; };
 		4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		4A8A5A411CCBE10B005CB318 /* BaseCamp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseCamp.podspec; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		4A8A5A471CCBE275005CB318 /* .slather.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
 		4A8A5A481CCBE275005CB318 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A8A5A491CCBE275005CB318 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFirstResponderTests.swift; sourceTree = "<group>"; };
+		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,6 @@
 			children = (
 				4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */,
 				4A6616271CCBA6AB0048EA51 /* ObjectiveC */,
-				4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */,
 				4A11D7801CCAEC3400E4C363 /* Info.plist */,
 			);
 			path = BaseCampTests;
@@ -157,8 +158,10 @@
 		4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */,
+				4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */,
 				4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */,
+				4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */,
+				4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */,
 				4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */,
 			);
 			path = BaseViewControllerTests;
@@ -349,10 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */,
-				4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */,
-				4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */,
+				4A66162E1CCBBAC50048EA51 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */,
 				4A8A5A451CCBE1D7005CB318 /* README.md in Sources */,
 				4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */,
+				4A8A5A511CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift in Sources */,
+				4A8A5A4F1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift in Sources */,
 				4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */,
 				4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */,
 			);
