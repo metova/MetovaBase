@@ -15,6 +15,9 @@
 		4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */; };
 		4A3846461CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */; };
 		4A3846481CCB143E00B7A2B6 /* BaseViewControllerFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */; };
+		4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */; };
+		4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616291CCBB3D70048EA51 /* AssertNoException.swift */; };
+		4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,11 @@
 		4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerConvenience.swift; sourceTree = "<group>"; };
 		4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboard.swift; sourceTree = "<group>"; };
 		4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFrames.swift; sourceTree = "<group>"; };
+		4A6616231CCBA6990048EA51 /* BaseCampTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseCampTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A6616241CCBA69A0048EA51 /* ObjectiveCTry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTry.h; sourceTree = "<group>"; };
+		4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTry.m; sourceTree = "<group>"; };
+		4A6616291CCBB3D70048EA51 /* AssertNoException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertNoException.swift; sourceTree = "<group>"; };
+		4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,8 @@
 		4A11D77D1CCAEC3400E4C363 /* BaseCampTests */ = {
 			isa = PBXGroup;
 			children = (
+				4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */,
+				4A6616271CCBA6AB0048EA51 /* ObjectiveC */,
 				4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */,
 				4A11D7801CCAEC3400E4C363 /* Info.plist */,
 			);
@@ -107,6 +117,33 @@
 				4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		4A6616271CCBA6AB0048EA51 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				4A6616231CCBA6990048EA51 /* BaseCampTests-Bridging-Header.h */,
+				4A6616281CCBB3B80048EA51 /* ExceptionHandling */,
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		4A6616281CCBB3B80048EA51 /* ExceptionHandling */ = {
+			isa = PBXGroup;
+			children = (
+				4A6616241CCBA69A0048EA51 /* ObjectiveCTry.h */,
+				4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */,
+				4A6616291CCBB3D70048EA51 /* AssertNoException.swift */,
+			);
+			path = ExceptionHandling;
+			sourceTree = "<group>";
+		};
+		4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */,
+			);
+			path = BaseViewControllerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */,
+				4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */,
+				4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */,
+				4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "BaseCamp iOSTests/Info.plist";
+				INFOPLIST_FILE = BaseCampTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -458,6 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "metova.BaseCamp-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BaseCampTests/ObjectiveC/BaseCampTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -492,13 +533,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "BaseCamp iOSTests/Info.plist";
+				INFOPLIST_FILE = BaseCampTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "metova.BaseCamp-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BaseCampTests/ObjectiveC/BaseCampTests-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
