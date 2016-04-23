@@ -177,6 +177,35 @@ class KeyboardNotificationTests: XCTestCase {
         
         waitForExpectationsWithTimeout(0, handler: nil)
     }
+    
+    func testDidHideNotification() {
+        class DidHideMethodClass: BaseViewController {
+            
+            var expectation: XCTestExpectation?
+            
+            @objc func keyboardDidHide(notification: NSNotification) {
+                // TODO: Assert some things about the notification
+                expectation?.fulfill()
+            }
+        }
+        
+        expectationForNotification(UIKeyboardWillShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidShowNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardWillHideNotification, object: nil, handler: nil)
+        expectationForNotification(UIKeyboardDidHideNotification, object: nil, handler: nil)
+        
+        BCTAssertNoException {
+            let testObject = DidHideMethodClass()
+            testObject.expectation = expectationWithDescription("Keyboard Did Hide Called")
+            testObject.loadView()
+            testObject.viewDidLoad()
+            postKeyboardNotifications()
+        }
+        
+        waitForExpectationsWithTimeout(0, handler: nil)
+    }
 }
 
 private func postKeyboardNotifications() {
