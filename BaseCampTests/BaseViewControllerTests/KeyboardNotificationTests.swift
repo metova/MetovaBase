@@ -39,8 +39,14 @@ class KeyboardNotificationTests: XCTestCase {
             var expectation: XCTestExpectation?
             
             @objc func keyboardWillShow(notification: NSNotification) {
-                // TODO: Assert some things about the notification
-                expectation?.fulfill()
+                defer { expectation?.fulfill() }
+                guard let userInfo = notification.userInfo else {
+                    XCTFail("Failed to get user info dictionary")
+                    return
+                }
+                
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue())
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue())
             }
         }
         
@@ -68,8 +74,14 @@ class KeyboardNotificationTests: XCTestCase {
             var expectation: XCTestExpectation?
             
             @objc func keyboardDidShow(notification: NSNotification) {
-                // TODO: Assert some things about the notification
-                expectation?.fulfill()
+                defer { expectation?.fulfill() }
+                guard let userInfo = notification.userInfo else {
+                    XCTFail("Failed to get user info dictionary")
+                    return
+                }
+                
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue())
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue())
             }
         }
         
@@ -97,8 +109,14 @@ class KeyboardNotificationTests: XCTestCase {
             var expectation: XCTestExpectation?
             
             @objc func keyboardWillChange(notification: NSNotification) {
-                // TODO: Assert some things about the notification
-                expectation?.fulfill()
+                defer { expectation?.fulfill() }
+                guard let userInfo = notification.userInfo else {
+                    XCTFail("Failed to get user info dictionary")
+                    return
+                }
+                
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue())
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue())
             }
         }
         
@@ -126,8 +144,14 @@ class KeyboardNotificationTests: XCTestCase {
             var expectation: XCTestExpectation?
             
             @objc func keyboardWillChange(notification: NSNotification) {
-                // TODO: Assert some things about the notification
-                expectation?.fulfill()
+                defer { expectation?.fulfill() }
+                guard let userInfo = notification.userInfo else {
+                    XCTFail("Failed to get user info dictionary")
+                    return
+                }
+                
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue())
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue())
             }
         }
         
@@ -155,8 +179,14 @@ class KeyboardNotificationTests: XCTestCase {
             var expectation: XCTestExpectation?
             
             @objc func keyboardWillHide(notification: NSNotification) {
-                // TODO: Assert some things about the notification
-                expectation?.fulfill()
+                defer { expectation?.fulfill() }
+                guard let userInfo = notification.userInfo else {
+                    XCTFail("Failed to get user info dictionary")
+                    return
+                }
+                
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue())
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue())
             }
         }
         
@@ -184,8 +214,14 @@ class KeyboardNotificationTests: XCTestCase {
             var expectation: XCTestExpectation?
             
             @objc func keyboardDidHide(notification: NSNotification) {
-                // TODO: Assert some things about the notification
-                expectation?.fulfill()
+                defer { expectation?.fulfill() }
+                guard let userInfo = notification.userInfo else {
+                    XCTFail("Failed to get user info dictionary")
+                    return
+                }
+                
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue())
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue())
             }
         }
         
@@ -218,10 +254,9 @@ private func postKeyboardNotifications() {
         UIKeyboardDidHideNotification
     ]
     
-    // TODO: Pass the right values for these keys
     let userInfo = [
-        UIKeyboardFrameBeginUserInfoKey : "frame begin",
-        UIKeyboardFrameEndUserInfoKey : "frame end"
+        UIKeyboardFrameBeginUserInfoKey : NSValue(CGRect: CGRect.zero),
+        UIKeyboardFrameEndUserInfoKey : NSValue(CGRect: CGRect.zero)
     ]
 
     for notificationName in keyboardNotificationNames {
