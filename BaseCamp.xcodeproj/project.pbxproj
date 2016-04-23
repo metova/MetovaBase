@@ -18,6 +18,8 @@
 		4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */; };
 		4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616291CCBB3D70048EA51 /* AssertNoException.swift */; };
 		4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */; };
+		4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
+		4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTry.m; sourceTree = "<group>"; };
 		4A6616291CCBB3D70048EA51 /* AssertNoException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertNoException.swift; sourceTree = "<group>"; };
 		4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationTests.swift; sourceTree = "<group>"; };
+		4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFramesTests.swift; sourceTree = "<group>"; };
+		4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				4A66162C1CCBB9970048EA51 /* KeyboardNotificationTests.swift */,
+				4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */,
+				4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */,
 			);
 			path = BaseViewControllerTests;
 			sourceTree = "<group>";
@@ -313,9 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */,
 				4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */,
 				4A66162E1CCBBAC50048EA51 /* KeyboardNotificationTests.swift in Sources */,
 				4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */,
+				4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */,
 				4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
