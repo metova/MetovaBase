@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "0.1.0"
   s.summary      = "A short description of BaseCamp."
   s.description  = <<-DESC
-                   Useful subclasses to inherit from.
+                   Useful UIKit subclasses to inherit from.
                    DESC
 
   s.homepage = "http://metova.com"

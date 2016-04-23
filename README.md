@@ -18,4 +18,4 @@ BaseCamp is owned and maintained by [Metova Inc.](https://metova.com)
 
 ## License
 
-ThunderCats is available under the MIT license. See the LICENSE file for more info.
+BaseCamp is available under the MIT license. See the LICENSE file for more info.
