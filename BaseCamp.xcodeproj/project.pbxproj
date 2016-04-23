@@ -8,9 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4A11D77A1CCAEC3400E4C363 /* BaseCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */; };
-		4A11D78C1CCAF27800E4C363 /* BaseCamp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A11D78A1CCAF27800E4C363 /* BaseCamp.h */; };
-		4A11D78D1CCAF27800E4C363 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A11D78B1CCAF27800E4C363 /* Info.plist */; };
-		4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */; };
+		4A11D78C1CCAF27800E4C363 /* BaseCamp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A11D78A1CCAF27800E4C363 /* BaseCamp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A38463C1CCAFA2A00B7A2B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */; };
+		4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */; };
+		4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */; };
+		4A3846461CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */; };
+		4A3846481CCB143E00B7A2B6 /* BaseViewControllerFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */; };
+		4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */; };
+		4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616291CCBB3D70048EA51 /* AssertNoException.swift */; };
+		4A66162E1CCBBAC50048EA51 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */; };
+		4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
+		4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */; };
+		4A8A5A451CCBE1D7005CB318 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A441CCBE1D7005CB318 /* README.md */; };
+		4A8A5A4A1CCBE275005CB318 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A461CCBE275005CB318 /* .gitignore */; };
+		4A8A5A4B1CCBE275005CB318 /* .slather.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A471CCBE275005CB318 /* .slather.yml */; };
+		4A8A5A4C1CCBE275005CB318 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A481CCBE275005CB318 /* .swiftlint.yml */; };
+		4A8A5A4D1CCBE275005CB318 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A5A491CCBE275005CB318 /* Gemfile */; };
+		4A8A5A4F1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */; };
+		4A8A5A511CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,11 +40,30 @@
 
 /* Begin PBXFileReference section */
 		4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A11D7791CCAEC3400E4C363 /* BaseCamp iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseCamp iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A11D7791CCAEC3400E4C363 /* BaseCamp-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseCamp-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A11D7801CCAEC3400E4C363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A11D78A1CCAF27800E4C363 /* BaseCamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCamp.h; sourceTree = "<group>"; };
 		4A11D78B1CCAF27800E4C363 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCampTests.swift; sourceTree = "<group>"; };
+		4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationDelegate.swift; sourceTree = "<group>"; };
+		4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerConvenience.swift; sourceTree = "<group>"; };
+		4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboard.swift; sourceTree = "<group>"; };
+		4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFrames.swift; sourceTree = "<group>"; };
+		4A6616231CCBA6990048EA51 /* BaseCampTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseCampTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A6616241CCBA69A0048EA51 /* ObjectiveCTry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTry.h; sourceTree = "<group>"; };
+		4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTry.m; sourceTree = "<group>"; };
+		4A6616291CCBB3D70048EA51 /* AssertNoException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertNoException.swift; sourceTree = "<group>"; };
+		4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerKeyboardNotificationTests.swift; sourceTree = "<group>"; };
+		4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFramesTests.swift; sourceTree = "<group>"; };
+		4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		4A8A5A411CCBE10B005CB318 /* BaseCamp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseCamp.podspec; sourceTree = "<group>"; };
+		4A8A5A441CCBE1D7005CB318 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4A8A5A461CCBE275005CB318 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4A8A5A471CCBE275005CB318 /* .slather.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
+		4A8A5A481CCBE275005CB318 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		4A8A5A491CCBE275005CB318 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFirstResponderTests.swift; sourceTree = "<group>"; };
+		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +88,7 @@
 		4A11D7631CCAEBB900E4C363 = {
 			isa = PBXGroup;
 			children = (
+				4A8A5A431CCBE133005CB318 /* BaseCampMetaData */,
 				4A11D7711CCAEC3400E4C363 /* BaseCamp */,
 				4A11D77D1CCAEC3400E4C363 /* BaseCampTests */,
 				4A11D7701CCAEC3400E4C363 /* Products */,
@@ -64,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */,
-				4A11D7791CCAEC3400E4C363 /* BaseCamp iOSTests.xctest */,
+				4A11D7791CCAEC3400E4C363 /* BaseCamp-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4A11D78A1CCAF27800E4C363 /* BaseCamp.h */,
+				4A38463A1CCAFA0F00B7A2B6 /* BaseViewController */,
 				4A11D78B1CCAF27800E4C363 /* Info.plist */,
 			);
 			path = BaseCamp;
@@ -81,10 +117,67 @@
 		4A11D77D1CCAEC3400E4C363 /* BaseCampTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A11D78E1CCAF27F00E4C363 /* BaseCampTests.swift */,
+				4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */,
+				4A6616271CCBA6AB0048EA51 /* ObjectiveC */,
 				4A11D7801CCAEC3400E4C363 /* Info.plist */,
 			);
 			path = BaseCampTests;
+			sourceTree = "<group>";
+		};
+		4A38463A1CCAFA0F00B7A2B6 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */,
+				4A3846401CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift */,
+				4A3846451CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift */,
+				4A3846431CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift */,
+				4A3846471CCB143E00B7A2B6 /* BaseViewControllerFrames.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		4A6616271CCBA6AB0048EA51 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				4A6616231CCBA6990048EA51 /* BaseCampTests-Bridging-Header.h */,
+				4A6616281CCBB3B80048EA51 /* ExceptionHandling */,
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		4A6616281CCBB3B80048EA51 /* ExceptionHandling */ = {
+			isa = PBXGroup;
+			children = (
+				4A6616241CCBA69A0048EA51 /* ObjectiveCTry.h */,
+				4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */,
+				4A6616291CCBB3D70048EA51 /* AssertNoException.swift */,
+			);
+			path = ExceptionHandling;
+			sourceTree = "<group>";
+		};
+		4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */,
+				4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */,
+				4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */,
+				4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */,
+				4A8A5A3F1CCBD822005CB318 /* NotificationHelper.swift */,
+			);
+			path = BaseViewControllerTests;
+			sourceTree = "<group>";
+		};
+		4A8A5A431CCBE133005CB318 /* BaseCampMetaData */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A5A461CCBE275005CB318 /* .gitignore */,
+				4A8A5A471CCBE275005CB318 /* .slather.yml */,
+				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
+				4A8A5A491CCBE275005CB318 /* Gemfile */,
+				4A8A5A441CCBE1D7005CB318 /* README.md */,
+				4A8A5A411CCBE10B005CB318 /* BaseCamp.podspec */,
+			);
+			name = BaseCampMetaData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,9 +194,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A11D76E1CCAEC3400E4C363 /* BaseCamp iOS */ = {
+		4A11D76E1CCAEC3400E4C363 /* BaseCamp-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOS" */;
+			buildConfigurationList = 4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOS" */;
 			buildPhases = (
 				4A11D76A1CCAEC3400E4C363 /* Sources */,
 				4A11D76B1CCAEC3400E4C363 /* Frameworks */,
@@ -117,14 +210,14 @@
 			);
 			dependencies = (
 			);
-			name = "BaseCamp iOS";
+			name = "BaseCamp-iOS";
 			productName = "BaseCamp iOS";
 			productReference = 4A11D76F1CCAEC3400E4C363 /* BaseCamp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4A11D7781CCAEC3400E4C363 /* BaseCamp iOSTests */ = {
+		4A11D7781CCAEC3400E4C363 /* BaseCamp-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOSTests" */;
+			buildConfigurationList = 4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOSTests" */;
 			buildPhases = (
 				4A11D7751CCAEC3400E4C363 /* Sources */,
 				4A11D7761CCAEC3400E4C363 /* Frameworks */,
@@ -135,9 +228,9 @@
 			dependencies = (
 				4A11D77C1CCAEC3400E4C363 /* PBXTargetDependency */,
 			);
-			name = "BaseCamp iOSTests";
+			name = "BaseCamp-iOSTests";
 			productName = "BaseCamp iOSTests";
-			productReference = 4A11D7791CCAEC3400E4C363 /* BaseCamp iOSTests.xctest */;
+			productReference = 4A11D7791CCAEC3400E4C363 /* BaseCamp-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -146,8 +239,8 @@
 		4A11D7641CCAEBB900E4C363 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				TargetAttributes = {
 					4A11D76E1CCAEC3400E4C363 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -169,8 +262,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A11D76E1CCAEC3400E4C363 /* BaseCamp iOS */,
-				4A11D7781CCAEC3400E4C363 /* BaseCamp iOSTests */,
+				4A11D76E1CCAEC3400E4C363 /* BaseCamp-iOS */,
+				4A11D7781CCAEC3400E4C363 /* BaseCamp-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,7 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A11D78D1CCAF27800E4C363 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +280,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8A5A4D1CCBE275005CB318 /* Gemfile in Resources */,
+				4A8A5A4C1CCBE275005CB318 /* .swiftlint.yml in Resources */,
+				4A8A5A4A1CCBE275005CB318 /* .gitignore in Resources */,
+				4A8A5A4B1CCBE275005CB318 /* .slather.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3846461CCAFFE500B7A2B6 /* BaseViewControllerKeyboard.swift in Sources */,
+				4A3846411CCAFB5800B7A2B6 /* KeyboardNotificationDelegate.swift in Sources */,
+				4A38463C1CCAFA2A00B7A2B6 /* BaseViewController.swift in Sources */,
+				4A3846441CCAFC0E00B7A2B6 /* BaseViewControllerConvenience.swift in Sources */,
+				4A3846481CCB143E00B7A2B6 /* BaseViewControllerFrames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A11D7901CCAF2CE00E4C363 /* BaseCampTests.swift in Sources */,
+				4A8A5A401CCBD822005CB318 /* NotificationHelper.swift in Sources */,
+				4A66162E1CCBBAC50048EA51 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */,
+				4A8A5A451CCBE1D7005CB318 /* README.md in Sources */,
+				4A66162A1CCBB3D70048EA51 /* AssertNoException.swift in Sources */,
+				4A8A5A511CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift in Sources */,
+				4A8A5A4F1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift in Sources */,
+				4A8A5A3E1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift in Sources */,
+				4A6616261CCBA69A0048EA51 /* ObjectiveCTry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +367,7 @@
 /* Begin PBXTargetDependency section */
 		4A11D77C1CCAEC3400E4C363 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4A11D76E1CCAEC3400E4C363 /* BaseCamp iOS */;
+			target = 4A11D76E1CCAEC3400E4C363 /* BaseCamp-iOS */;
 			targetProxy = 4A11D77B1CCAEC3400E4C363 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -268,6 +376,8 @@
 		4A11D7681CCAEBB900E4C363 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -320,7 +430,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = BaseCamp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -372,7 +482,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = BaseCamp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = metova.BaseCamp;
@@ -422,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "BaseCamp iOSTests/Info.plist";
+				INFOPLIST_FILE = BaseCampTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -430,6 +540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "metova.BaseCamp-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BaseCampTests/ObjectiveC/BaseCampTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -464,13 +575,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "BaseCamp iOSTests/Info.plist";
+				INFOPLIST_FILE = BaseCampTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "metova.BaseCamp-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BaseCampTests/ObjectiveC/BaseCampTests-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -487,21 +599,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOS" */ = {
+		4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A11D7821CCAEC3400E4C363 /* Debug */,
 				4A11D7831CCAEC3400E4C363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp iOSTests" */ = {
+		4A11D7841CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "BaseCamp-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A11D7851CCAEC3400E4C363 /* Debug */,
 				4A11D7861CCAEC3400E4C363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

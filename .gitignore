@@ -12,3 +12,9 @@ build/
 
 # Ignore xcuserdata
 xcuserdata/
+
+# Ignore bin directory
+bin/
+
+# Ignore Slather html directory
+html/
