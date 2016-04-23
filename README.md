@@ -8,7 +8,7 @@
 BaseCamp is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'BaseCamp', :git => 'https://github.com/metova/BaseCamp.git'
+    pod 'BaseCamp'
 
 ## Credits
 
