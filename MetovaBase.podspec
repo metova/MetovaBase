@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MetovaBase"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "A collection of useful subclasses extending UIKit's functionality."
 
   s.homepage = "http://metova.com"
