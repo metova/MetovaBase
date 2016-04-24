@@ -1,21 +1,21 @@
-# BaseCamp
+# MetovaBase
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/basecamp/badge.png)](http://cocoadocs.org/docsets/basecamp)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/basecamp/badge.png)](http://cocoadocs.org/docsets/basecamp)
+[![Version](http://cocoapod-badges.herokuapp.com/v/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
 
 ## Installation
 
-BaseCamp is available through [CocoaPods](http://cocoapods.org). To install
+MetovaBase is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'BaseCamp'
+    pod 'MetovaBase'
 
 ## Credits
 
-BaseCamp is owned and maintained by [Metova Inc.](https://metova.com)
+MetovaBase is owned and maintained by [Metova Inc.](https://metova.com)
 
-[Contributors](https://github.com/Metova/BaseCamp/graphs/contributors)
+[Contributors](https://github.com/Metova/MetovaBase/graphs/contributors)
 
 ## License
 
-BaseCamp is available under the MIT license. See the LICENSE file for more info.
+MetovaBase is available under the MIT license. See the LICENSE file for more info.

@@ -1,6 +1,6 @@
 //
 //  BaseViewControllerFramesTests.swift
-//  BaseCamp
+//  MetovaBase
 //
 //  Created by Nick Griffith on 4/23/16.
 //
@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import BaseCamp
+@testable import MetovaBase
 
 class BaseViewControllerFramesTests: XCTestCase {
     

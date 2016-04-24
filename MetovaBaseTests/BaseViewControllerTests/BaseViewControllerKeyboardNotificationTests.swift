@@ -1,6 +1,6 @@
 //
 //  KeyboardNotificationTests.swift
-//  BaseCamp
+//  MetovaBase
 //
 //  Created by Nick Griffith on 4/23/16.
 //
@@ -9,7 +9,7 @@
 import XCTest
 
 import UIKit
-@testable import BaseCamp
+@testable import MetovaBase
 
 class KeyboardNotificationTests: XCTestCase {
     

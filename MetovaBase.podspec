@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "BaseCamp"
+  s.name         = "MetovaBase"
   s.version      = "0.1.0"
   s.summary      = "A collection of useful subclasses extending UIKit's functionality."
 
@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
 
   s.platform = :ios, '8.0'
 
-  s.source              = { :git => "https://github.com/metova/BaseCamp.git", :tag => s.version.to_s }
-  s.source_files        = "BaseCamp", "BaseCamp/**/*.{h,m,swift}"
-  s.public_header_files = 'BaseCamp/**/*.h'
-  s.exclude_files       = "BaseCamp/Exclude"
+  s.source              = { :git => "https://github.com/metova/MetovaBase.git", :tag => s.version.to_s }
+  s.source_files        = "MetovaBase", "MetovaBase/**/*.{h,m,swift}"
+  s.public_header_files = 'MetovaBase/**/*.h'
+  s.exclude_files       = "MetovaBase/Exclude"
 end

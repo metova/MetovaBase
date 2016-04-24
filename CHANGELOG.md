@@ -1,4 +1,4 @@
-# BaseCamp CHANGELOG
+# MetovaBase CHANGELOG
 
 ## 0.1.0
 

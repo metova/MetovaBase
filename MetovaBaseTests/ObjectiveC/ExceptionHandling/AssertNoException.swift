@@ -1,6 +1,6 @@
 //
-//  BaseCampAssertNoException.swift
-//  BaseCamp
+//  MetovaBaseAssertNoException.swift
+//  MetovaBase
 //
 //  Created by Nick Griffith on 4/23/16.
 //
