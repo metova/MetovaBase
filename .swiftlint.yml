@@ -1,7 +1,6 @@
 disabled_rules: # rule identifiers to exclude from running
-  - todo
+  - todo # This rule is handled by a separate build phase step.
   - line_length
-  - valid_docs
   - trailing_whitespace
   - statement_position
   - opening_brace
