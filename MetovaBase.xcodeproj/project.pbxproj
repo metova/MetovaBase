@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A0315461CCE605300DDCB26 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4A11D76F1CCAEC3400E4C363 /* MetovaBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetovaBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A11D7791CCAEC3400E4C363 /* MetovaBase.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetovaBase.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A11D7801CCAEC3400E4C363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,10 +172,11 @@
 				4A8A5A471CCBE275005CB318 /* .slather.yml */,
 				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
 				4A8A5A491CCBE275005CB318 /* Gemfile */,
-				4A8A5A441CCBE1D7005CB318 /* README.md */,
 				4A8A5A411CCBE10B005CB318 /* MetovaBase.podspec */,
 				4AD7CB6F1CCC05B60006C1A5 /* Package.swift */,
+				4A8A5A441CCBE1D7005CB318 /* README.md */,
 				4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */,
+				4A0315461CCE605300DDCB26 /* LICENSE */,
 			);
 			name = MetovaBaseMetaData;
 			sourceTree = "<group>";
@@ -240,6 +242,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Metova;
 				TargetAttributes = {
 					4A11D76E1CCAEC3400E4C363 = {
 						CreatedOnToolsVersion = 7.2.1;
