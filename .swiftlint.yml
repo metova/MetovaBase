@@ -64,11 +64,6 @@ custom_rules:
       regex: "(^ +// +(?!swiftlint)[a-z]+)"
       message: "The first word of a comment should be capitalized"
       severity: error
-   comments_capitalized_find_possible_code:
-      name: "Catch Commented Out Code"
-      regex: "(^ *// +(?!swiftlint)[a-z]+)"
-      message: "The first word of a comment should be capitalized"
-      severity: warning
    empty_first_line:
       name: "Empty First Line"
       regex: "(^[ a-zA-Z ]*(?:protocol|extension|class|struct) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)"
