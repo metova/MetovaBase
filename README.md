@@ -5,6 +5,7 @@
 
 ## Requirements
 
+ - iOS 8.0
  - Swift 2.2
 
 ## Installation
