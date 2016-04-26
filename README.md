@@ -1,7 +1,10 @@
 # MetovaBase
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
+[![Twitter](https://img.shields.io/badge/twitter-@Metova-3CAC84.svg)](http://twitter.com/metova)
+[![Build Status](https://travis-ci.org/metova/MetovaBase.svg)](https://travis-ci.org/metova/MetovaBase)
+[![CocoaPods Compatible](http://cocoapod-badges.herokuapp.com/v/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
+[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/MetovaBase.svg)](http://cocoadocs.org/docsets/MetovaBase/)
 
 ## Requirements
 

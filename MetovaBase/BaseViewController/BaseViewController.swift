@@ -29,13 +29,18 @@
 
 import UIKit
 
+/**
+ The `BaseViewController` class extends from `UIViewController` and adds useful, common utility that we have found ourselves adding in most if not all of our view controller classes.
+ */
 public class BaseViewController: UIViewController {
 
     deinit {
         removeKeyboardNotifications()
     }
     
-    
+    /**
+     `BaseViewController` does some additional set up in `viewDidLoad`.  If overriding, be sure to call `super.viewDidLoad` in your subclass.
+     */
     public override func viewDidLoad() {
         super.viewDidLoad()
         

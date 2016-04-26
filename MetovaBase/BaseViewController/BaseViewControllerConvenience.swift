@@ -27,7 +27,7 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-extension BaseViewController {
+public extension BaseViewController {
 
     /**
      Dismisses the keyboard if it has been presented by this view controller.
