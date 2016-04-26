@@ -29,11 +29,54 @@
 
 import Foundation
 
-@objc protocol KeyboardNotificationDelegate: class {
-    @objc optional func keyboardWillShow(notification: NSNotification)
-    @objc optional func keyboardDidShow(notification: NSNotification)
-    @objc optional func keyboardWillChange(notification: NSNotification)
-    @objc optional func keyboardDidChange(notification: NSNotification)
-    @objc optional func keyboardWillHide(notification: NSNotification)
-    @objc optional func keyboardDidHide(notification: NSNotification)
+/**
+ This protocol contains a collection of methods which `BaseViewController` subclasses (or extensions) can implement in order to hear about keyboard notifications.  You do not need to register or unregister for these notifications in your subclass or extension--you simply need to implement these methods.
+ 
+ `BaseViewController` uses the `respondsToSelector:` method on itself to determine whether or not it should register for these notifications.  As such, if implementing these in Swift, you must mark them as either `@objc` or `dynamic`.  If not, they are not implemented as selectors and `respondsToSelector:` returns `false`.
+ 
+ For more information about the on-screen keyboard, see [Managing the Keyboard](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html).
+ */
+@objc public protocol KeyboardNotificationDelegate: class {
+    
+    /**
+     Called when the [`UIKeyboardWillShowNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardWillShowNotification) is fired.
+     
+     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+     */
+    optional func keyboardWillShow(notification: NSNotification)
+    
+    /**
+     Called when the [`UIKeyboardDidShowNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardDidShowNotification) is fired.
+     
+     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+     */
+    optional func keyboardDidShow(notification: NSNotification)
+    
+    /**
+     Called when the [`UIKeyboardWillChangeNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardWillChangeNotification) is fired.
+     
+     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+     */
+    optional func keyboardWillChange(notification: NSNotification)
+    
+    /**
+     Called when the [`UIKeyboardDidChangeNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardDidChangeNotification) is fired.
+     
+     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+     */
+    optional func keyboardDidChange(notification: NSNotification)
+    
+    /**
+     Called when the [`UIKeyboardWillHideNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardWillHideNotification) is fired.
+     
+     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+     */
+    optional func keyboardWillHide(notification: NSNotification)
+    
+    /**
+     Called when the [`UIKeyboardDidHideNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardDidHideNotification) is fired.
+     
+     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+     */
+    optional func keyboardDidHide(notification: NSNotification)
 }

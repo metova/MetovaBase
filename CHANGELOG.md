@@ -8,6 +8,8 @@ Added badges.
  - Travis Build Status
  - Documentation
 
+Added documentation.
+
 ## 0.2.2
 
 Fixed some SwiftLint complaints.  Updated README.

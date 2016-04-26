@@ -29,7 +29,7 @@
 
 import UIKit
 
-extension BaseViewController {
+public extension BaseViewController {
     
     /**
      Parses keyboard frames out of keyboard notification.
