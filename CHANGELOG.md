@@ -1,5 +1,13 @@
 # MetovaBase CHANGELOG
 
+## 0.2.3
+
+Added badges.
+
+ - Twitter
+ - Travis Build Status
+ - Documentation
+
 ## 0.2.2
 
 Fixed some SwiftLint complaints.  Updated README.
