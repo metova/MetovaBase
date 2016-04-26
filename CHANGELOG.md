@@ -1,5 +1,9 @@
 # MetovaBase CHANGELOG
 
+## 0.2.4
+
+Added .travis.yml for Travis-CI integration.
+
 ## 0.2.3
 
 Added badges.
