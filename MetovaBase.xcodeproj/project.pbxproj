@@ -62,6 +62,7 @@
 		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
 		4AD7CB6F1CCC05B60006C1A5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		6E08D1FD1CCFAD6A00426439 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +172,7 @@
 				4A8A5A461CCBE275005CB318 /* .gitignore */,
 				4A8A5A471CCBE275005CB318 /* .slather.yml */,
 				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
+				6E08D1FD1CCFAD6A00426439 /* .travis.yml */,
 				4A8A5A491CCBE275005CB318 /* Gemfile */,
 				4A8A5A411CCBE10B005CB318 /* MetovaBase.podspec */,
 				4AD7CB6F1CCC05B60006C1A5 /* Package.swift */,
