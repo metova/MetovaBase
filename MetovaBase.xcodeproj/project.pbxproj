@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A11D77A1CCAEC3400E4C363 /* MetovaBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A11D76F1CCAEC3400E4C363 /* MetovaBase.framework */; };
+		4A9640C61CD044A30038E044 /* KeyboardAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */; };
 		4AED65651CCD021A00A70087 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */; };
 		4AED65661CCD021E00A70087 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
 		4AED656B1CCD023100A70087 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */; };
@@ -60,6 +61,7 @@
 		4A8A5A491CCBE275005CB318 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFirstResponderTests.swift; sourceTree = "<group>"; };
 		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
+		4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAnimationInfo.swift; path = KeyboardAnimationInfo/KeyboardAnimationInfo.swift; sourceTree = "<group>"; };
 		4AD7CB6F1CCC05B60006C1A5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		6E08D1FD1CCFAD6A00426439 /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				4A11D78A1CCAF27800E4C363 /* MetovaBase.h */,
 				4A38463A1CCAFA0F00B7A2B6 /* BaseViewController */,
+				4A9640C41CD044860038E044 /* KeyboardAnimationInfo */,
 				4A11D78B1CCAF27800E4C363 /* Info.plist */,
 			);
 			path = MetovaBase;
@@ -181,6 +184,14 @@
 				4A0315461CCE605300DDCB26 /* LICENSE */,
 			);
 			name = MetovaBaseMetaData;
+			sourceTree = "<group>";
+		};
+		4A9640C41CD044860038E044 /* KeyboardAnimationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */,
+			);
+			name = KeyboardAnimationInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 				4AED656B1CCD023100A70087 /* BaseViewController.swift in Sources */,
 				4AED656D1CCD023700A70087 /* BaseViewControllerKeyboard.swift in Sources */,
 				4AED656C1CCD023300A70087 /* KeyboardNotificationDelegate.swift in Sources */,
+				4A9640C61CD044A30038E044 /* KeyboardAnimationInfo.swift in Sources */,
 				4AED656F1CCD024100A70087 /* BaseViewControllerConvenience.swift in Sources */,
 				4AED65701CCD024400A70087 /* BaseViewControllerFrames.swift in Sources */,
 			);
