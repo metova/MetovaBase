@@ -47,7 +47,13 @@ public struct KeyboardAnimationInfo {
     public let endFrame: CGRect
     public let animationDuration: NSTimeInterval
     public let animationCurve: UIViewAnimationCurve
-    public let isLocalUser: Bool
+    
+    @available (iOS 9.0, *)
+    public var isLocalUser: Bool {
+        return _isLocalUser
+    }
+    
+    private let _isLocalUser: Bool
     
     init?(notification: NSNotification) {
         guard let animationInfo = notification.userInfo else {
@@ -85,9 +91,9 @@ public struct KeyboardAnimationInfo {
                 return nil
             }
             
-            self.isLocalUser = isLocalUser
+            _isLocalUser = isLocalUser
         } else {
-            isLocalUser = true
+            _isLocalUser = true
         }
     }
 }
