@@ -1,7 +1,5 @@
+coverage_service: coveralls
+xcodeproj: MetovaBase.xcodeproj
+scheme: MetovaBase-iOS
 ignore:
-# Pods
- - Pods/*
-# System/SDK Files
- - ../*
-# Any other files you want to ignore
-# This is relative to the file system, not Xcode's directory structure
+# No ignores for now
