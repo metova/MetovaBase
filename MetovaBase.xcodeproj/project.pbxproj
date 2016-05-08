@@ -57,9 +57,10 @@
 		4A8A5A461CCBE275005CB318 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A8A5A471CCBE275005CB318 /* .slather.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
 		4A8A5A481CCBE275005CB318 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		4A8A5A491CCBE275005CB318 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		4A8A5A491CCBE275005CB318 /* GEMFILE */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = GEMFILE; sourceTree = "<group>"; };
 		4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFirstResponderTests.swift; sourceTree = "<group>"; };
 		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
+		4AB9A3E61CDFB9BB0021B6B8 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4AD7CB6F1CCC05B60006C1A5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		6E08D1FD1CCFAD6A00426439 /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
@@ -87,7 +88,7 @@
 		4A11D7631CCAEBB900E4C363 = {
 			isa = PBXGroup;
 			children = (
-				4A8A5A431CCBE133005CB318 /* MetovaBaseMetaData */,
+				4A8A5A431CCBE133005CB318 /* Related Files */,
 				4A11D7711CCAEC3400E4C363 /* MetovaBase */,
 				4A11D77D1CCAEC3400E4C363 /* MetovaBaseTests */,
 				4A11D7701CCAEC3400E4C363 /* Products */,
@@ -166,21 +167,22 @@
 			path = BaseViewControllerTests;
 			sourceTree = "<group>";
 		};
-		4A8A5A431CCBE133005CB318 /* MetovaBaseMetaData */ = {
+		4A8A5A431CCBE133005CB318 /* Related Files */ = {
 			isa = PBXGroup;
 			children = (
 				4A8A5A461CCBE275005CB318 /* .gitignore */,
 				4A8A5A471CCBE275005CB318 /* .slather.yml */,
 				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
 				6E08D1FD1CCFAD6A00426439 /* .travis.yml */,
-				4A8A5A491CCBE275005CB318 /* Gemfile */,
-				4A8A5A411CCBE10B005CB318 /* MetovaBase.podspec */,
-				4AD7CB6F1CCC05B60006C1A5 /* Package.swift */,
-				4A8A5A441CCBE1D7005CB318 /* README.md */,
+				4A8A5A491CCBE275005CB318 /* GEMFILE */,
 				4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */,
 				4A0315461CCE605300DDCB26 /* LICENSE */,
+				4AD7CB6F1CCC05B60006C1A5 /* Package.swift */,
+				4AB9A3E61CDFB9BB0021B6B8 /* CONTRIBUTING.md */,
+				4A8A5A441CCBE1D7005CB318 /* README.md */,
+				4A8A5A411CCBE10B005CB318 /* MetovaBase.podspec */,
 			);
-			name = MetovaBaseMetaData;
+			name = "Related Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
