@@ -32,7 +32,124 @@ import XCTest
 @testable import MetovaBase
 
 class BVControllerAdjustContentInsetTests: XCTestCase {
-
-// TODO: Write tests around `adjustContentInset(scrollview scrollView: UIScrollView, forKeyboardWillChangeFrameNotification notification: NSNotification)` method.
     
+    // MARK: Properties
+    
+    let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    
+    
+    
+    // MARK: Helper
+    
+    func getTestVCWithFullscreenScrollView() -> (testVC: BaseViewController, scrollView: UIScrollView) {
+        
+        for subview in window.subviews {
+            subview.removeFromSuperview()
+        }
+        
+        let testVC = BaseViewController()
+        window.rootViewController = testVC
+        window.addSubview(testVC.view)
+        
+        testVC.loadView()
+        testVC.viewDidLoad()
+        testVC.view.frame = UIScreen.mainScreen().bounds
+        
+        let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
+        testVC.view.addSubview(scrollView)
+        
+        return (testVC: testVC, scrollView: scrollView)
+    }
+    
+    
+    
+    func simulateNotificationWithKeyboardHeight(keyboardHeight: CGFloat, testVC: BaseViewController, scrollView: UIScrollView) {
+        
+        let userInfo: [NSObject: AnyObject] = [
+            UIKeyboardFrameEndUserInfoKey: NSValue(CGRect: CGRect(x: 0, y: UIScreen.mainScreen().bounds.height - keyboardHeight, width: UIScreen.mainScreen().bounds.width, height: keyboardHeight))
+        ]
+        
+        let notification = NSNotification(name: UIKeyboardWillChangeFrameNotification, object: nil, userInfo: userInfo)
+        
+        testVC.adjustContentInset(scrollview: scrollView, forKeyboardWillChangeFrameNotification: notification)
+    }
+    
+    
+    
+    // MARK: Tests
+    
+    func testContentInsetAdjustmentForFullscreenScrollView() {
+        
+        let (testVC, scrollView) = getTestVCWithFullscreenScrollView()
+        
+        // Simulate a keyboard appearance:
+        simulateNotificationWithKeyboardHeight(100, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 100)
+        
+        // Simulate keyboard frame shrinking:
+        simulateNotificationWithKeyboardHeight(80, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 80)
+        
+        // Simulate keyboard frame growing:
+        simulateNotificationWithKeyboardHeight(90, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 90)
+        
+        // Simulate keyboard dismissal:
+        simulateNotificationWithKeyboardHeight(0, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 0)
+    }
+    
+    
+    
+    func testContentInsetAdjustmentForPartialScreenScrollView() {
+        
+        let (testVC, scrollView) = getTestVCWithFullscreenScrollView()
+        
+        var frame = testVC.view.frame
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: frame.size.height - 10)
+        scrollView.frame = frame
+        
+        // Simulate a keyboard appearance:
+        simulateNotificationWithKeyboardHeight(100, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 90)
+        
+        // Simulate keyboard frame shrinking:
+        simulateNotificationWithKeyboardHeight(80, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 70)
+        
+        // Simulate keyboard frame growing:
+        simulateNotificationWithKeyboardHeight(90, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 80)
+        
+        // Simulate keyboard dismissal:
+        simulateNotificationWithKeyboardHeight(0, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 0)
+    }
+    
+    
+    
+    func testContentInsetAdjustmentIsUnaffectedIfKeyboardDoesNotCoverScrollView() {
+        
+        let (testVC, scrollView) = getTestVCWithFullscreenScrollView()
+        
+        var frame = testVC.view.frame
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: frame.size.height - 100)
+        scrollView.frame = frame
+        
+        // Simulate a keyboard appearance:
+        simulateNotificationWithKeyboardHeight(100, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 0)
+        
+        // Simulate keyboard frame shrinking:
+        simulateNotificationWithKeyboardHeight(80, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 0)
+        
+        // Simulate keyboard frame growing:
+        simulateNotificationWithKeyboardHeight(90, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 0)
+        
+        // Simulate keyboard dismissal:
+        simulateNotificationWithKeyboardHeight(0, testVC: testVC, scrollView: scrollView)
+        XCTAssertEqual(scrollView.contentInset.bottom, 0)
+    }
 }
