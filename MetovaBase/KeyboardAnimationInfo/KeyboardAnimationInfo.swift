@@ -34,18 +34,32 @@ import UIKit
 
 // TODO: Double check on all the keyboard notifications available here https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIWindowDidBecomeVisibleNotification
 
-// TODO: Protocol+extensions per notification
-
 // TODO: Unit test
 
-/**
- *
- */
 public struct KeyboardAnimationInfo {
     
+    private static let keyboardNotificationNames: [String] = [
+        UIWindowDidBecomeVisibleNotification,
+        UIWindowDidBecomeHiddenNotification,
+        UIWindowDidBecomeKeyNotification,
+        UIWindowDidResignKeyNotification,
+        UIKeyboardWillShowNotification,
+        UIKeyboardDidShowNotification,
+        UIKeyboardWillHideNotification,
+        UIKeyboardDidHideNotification,
+        UIKeyboardWillChangeFrameNotification,
+        UIKeyboardDidChangeFrameNotification
+    ]
+    
     public let startFrame: CGRect
+    
+    
     public let endFrame: CGRect
+    
+    
     public let animationDuration: NSTimeInterval
+    
+    
     public let animationCurve: UIViewAnimationCurve
     
     @available (iOS 9.0, *)
@@ -55,7 +69,12 @@ public struct KeyboardAnimationInfo {
     
     private let _isLocalUser: Bool
     
+    
     init?(notification: NSNotification) {
+        guard KeyboardAnimationInfo.keyboardNotificationNames.contains(notification.name) else {
+            return nil
+        }
+        
         guard let animationInfo = notification.userInfo else {
             return nil
         }
@@ -92,7 +111,8 @@ public struct KeyboardAnimationInfo {
             }
             
             _isLocalUser = isLocalUser
-        } else {
+        }
+        else {
             _isLocalUser = true
         }
     }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A11D77A1CCAEC3400E4C363 /* MetovaBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A11D76F1CCAEC3400E4C363 /* MetovaBase.framework */; };
 		4A9640C61CD044A30038E044 /* KeyboardAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */; };
+		4ABF787A1CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */; };
+		4ABF787C1CE14C3F00F5B674 /* AnimationInfoHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF787B1CE14C3F00F5B674 /* AnimationInfoHelpers.swift */; };
 		4AED65651CCD021A00A70087 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */; };
 		4AED65661CCD021E00A70087 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
 		4AED656B1CCD023100A70087 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */; };
@@ -62,6 +64,8 @@
 		4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFirstResponderTests.swift; sourceTree = "<group>"; };
 		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
 		4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAnimationInfo.swift; path = KeyboardAnimationInfo/KeyboardAnimationInfo.swift; sourceTree = "<group>"; };
+		4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAnimationInfoTests.swift; path = KeyboardAnimationInfoTests/KeyboardAnimationInfoTests.swift; sourceTree = "<group>"; };
+		4ABF787B1CE14C3F00F5B674 /* AnimationInfoHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationInfoHelpers.swift; path = KeyboardAnimationInfoTests/AnimationInfoHelpers.swift; sourceTree = "<group>"; };
 		4AD7CB6F1CCC05B60006C1A5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		6E08D1FD1CCFAD6A00426439 /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		4A11D77D1CCAEC3400E4C363 /* MetovaBaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				4ABF78771CE14BE700F5B674 /* KeyboardAnimationInfoTests */,
 				4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */,
 				4A6616271CCBA6AB0048EA51 /* ObjectiveC */,
 				4A11D7801CCAEC3400E4C363 /* Info.plist */,
@@ -194,6 +199,15 @@
 			name = KeyboardAnimationInfo;
 			sourceTree = "<group>";
 		};
+		4ABF78771CE14BE700F5B674 /* KeyboardAnimationInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */,
+				4ABF787B1CE14C3F00F5B674 /* AnimationInfoHelpers.swift */,
+			);
+			name = KeyboardAnimationInfoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -218,7 +232,7 @@
 				4A11D76D1CCAEC3400E4C363 /* Resources */,
 				4A11D7871CCAF09300E4C363 /* SwiftLint */,
 				4A11D7881CCAF0BB00E4C363 /* TODO Warnings */,
-				4A11D7891CCAF11600E4C363 /* Automatically Increment Build Number */,
+				4A11D7891CCAF11600E4C363 /* Automatically Set Build Number */,
 			);
 			buildRules = (
 			);
@@ -329,19 +343,19 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    KEYWORDS=\"TODO|\\?\\?\\?:|\\!\\!\\!:\"\n    find \"${SRCROOT}/MetovaBase\" \"${SRCROOT}/MetovaBaseTests\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | \\\n    xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\n    perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\nfi";
 		};
-		4A11D7891CCAF11600E4C363 /* Automatically Increment Build Number */ = {
+		4A11D7891CCAF11600E4C363 /* Automatically Set Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Automatically Increment Build Number";
+			name = "Automatically Set Build Number";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$(($bN + 1))\nbN=$(printf \"%u\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+			shellScript = "#!/bin/bash\nbN=$(date +\"%s\")\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -365,10 +379,12 @@
 			files = (
 				4AED65751CCD025900A70087 /* AssertNoException.swift in Sources */,
 				4AED65721CCD024B00A70087 /* BaseViewControllerAdjustContentInsetTests.swift in Sources */,
+				4ABF787C1CE14C3F00F5B674 /* AnimationInfoHelpers.swift in Sources */,
 				4AED65661CCD021E00A70087 /* BaseViewControllerFramesTests.swift in Sources */,
 				4AED65731CCD024E00A70087 /* NotificationHelper.swift in Sources */,
 				4AED65651CCD021A00A70087 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */,
 				4AED65711CCD024900A70087 /* BaseViewControllerFirstResponderTests.swift in Sources */,
+				4ABF787A1CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift in Sources */,
 				4AED65741CCD025600A70087 /* ObjectiveCTry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

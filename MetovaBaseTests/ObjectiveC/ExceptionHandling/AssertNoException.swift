@@ -29,6 +29,6 @@
 
 import XCTest
 
-public func BCTAssertNoException(@noescape closure: () -> Void) {
+public func MBAssertNoException(@noescape closure: () -> Void) {
     XCTAssertNil(ObjCTry.executeBlock(closure))
 }
