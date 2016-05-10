@@ -1,11 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "MetovaBase"
-  s.version      = "0.2.4"
+  s.version      = "0.2.5"
   s.summary      = "A collection of useful subclasses extending UIKit's functionality."
 
   s.homepage = "http://metova.com"
   s.license  = { :type => "MIT", :file => "LICENSE" }
-  s.authors  = { "Nick Griffith" => "nick.griffith@metova.com" }
+  s.authors  = {
+    "Nick Griffith" => "nick.griffith@metova.com",
+    "Logan Gauthier" => "logan.gauthier@metova.com"
+  }
 
   s.platform = :ios, '8.0'
 

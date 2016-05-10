@@ -1,8 +1,15 @@
 # MetovaBase CHANGELOG
 
+## 0.2.5
+
+Added KeyboardAnimationInfo struct which makes getting keyboard animation information significantly easier
+
+Improved testing code coverage
+
 ## 0.2.4
 
 Added .travis.yml for Travis-CI integration.
+
 Fixing metadata files for consistency with other projects.
 
 ## 0.2.3
