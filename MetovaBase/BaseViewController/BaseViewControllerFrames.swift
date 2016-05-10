@@ -62,7 +62,7 @@ public extension BaseViewController {
             
             if let window = view.window {
                 let rectInWindow = window.convertRect(scrollView.frame, fromView: scrollView.superview)
-                scrollViewDistanceToBottomOfWindow = CGRectGetHeight(window.frame) - CGRectGetHeight(rectInWindow) - rectInWindow.origin.y
+                scrollViewDistanceToBottomOfWindow = CGRectGetHeight(window.frame) - rectInWindow.height - rectInWindow.origin.y
             }
             
             var inset = scrollView.contentInset
