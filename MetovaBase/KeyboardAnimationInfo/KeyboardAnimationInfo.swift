@@ -30,15 +30,12 @@
 
 import UIKit
 
-// TOOD: Add doc comments
-
+/**
+ The KeyboardAnimationInfo struct contains all of the needed info for a keyboard animation and is initialized using the notification that iOS fires in response to keyboard events.  The struct cleans up and abstracts away all the messy business involved in pulling values out of `NSNotification`.
+ */
 public struct KeyboardAnimationInfo {
     
     private static let keyboardNotificationNames: [String] = [
-        UIWindowDidBecomeVisibleNotification,
-        UIWindowDidBecomeHiddenNotification,
-        UIWindowDidBecomeKeyNotification,
-        UIWindowDidResignKeyNotification,
         UIKeyboardWillShowNotification,
         UIKeyboardDidShowNotification,
         UIKeyboardWillHideNotification,
@@ -47,25 +44,33 @@ public struct KeyboardAnimationInfo {
         UIKeyboardDidChangeFrameNotification
     ]
     
+    /// Identifies the start frame of the keyboard in screen coordinates. These coordinates do not take into account any rotation factors applied to the window’s contents as a result of interface orientation changes. Thus, you may need to convert the rectangle to window coordinates (using the `convertRect:fromWindow:` method) or to view coordinates (using the `convertRect:fromView:` method) before using it.  This is equivalent to the value found in the user info dictionar under the `UIKeyboardFrameBeginserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     public let startFrame: CGRect
     
-    
+    /// Identifies the end frame of the keyboard in screen coordinates. These coordinates do not take into account any rotation factors applied to the window’s contents as a result of interface orientation changes. Thus, you may need to convert the rectangle to window coordinates (using the `convertRect:fromWindow:` method) or to view coordinates (using the `convertRect:fromView:` method) before using it.  This is equivalent to the value found in the user info dictionar under the `UIKeyboardFrameEndUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     public let endFrame: CGRect
     
-    
+    /// Identifies the duration of the animation in seconds.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardAnimationDurationUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     public let animationDuration: NSTimeInterval
     
-    
+    /// Defines how the keyboard will be animated onto or off the screen.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardAnimationCurveUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     public let animationCurve: UIViewAnimationCurve
     
     @available (iOS 9.0, *)
+    /// Identifies whether the keyboard belongs to the current app. With multitasking on iPad, all visible apps are notified when the keyboard appears and disappears. The value of this property is `true` for the app that caused the keyboard to appear and `false` for any other apps.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardIsLocalUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     public var isLocalUser: Bool {
         return _isLocalUser
     }
     
     private let _isLocalUser: Bool
     
-    
+    /**
+     Creates a new instance.
+     
+     - parameter notification: The notification fired in response to a keyboard animation event.
+     
+     - returns: The new instance, or `nil` if an invalid notification is passed in.
+     */
     init?(notification: NSNotification) {
         guard KeyboardAnimationInfo.keyboardNotificationNames.contains(notification.name) else {
             return nil
