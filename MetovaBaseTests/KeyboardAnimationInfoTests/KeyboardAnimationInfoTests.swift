@@ -96,4 +96,15 @@ class KeyboardAnimationInfoTests: XCTestCase {
             
         }
     }
+    
+    func testNoUserInfo() {
+        for notificationName in keyboardNotificationNames {
+            let notification = NSNotification(name: notificationName, object: nil)
+            
+            XCTAssertNil(
+                KeyboardAnimationInfo(notification: notification),
+                "Instantiated KeyboardAnimationInfo with notification name \(notificationName) despite missing user info."
+            )
+        }
+    }
 }

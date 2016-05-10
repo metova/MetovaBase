@@ -32,10 +32,6 @@ import UIKit
 
 // TOOD: Add doc comments
 
-// TODO: Double check on all the keyboard notifications available here https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIWindowDidBecomeVisibleNotification
-
-// TODO: Unit test
-
 public struct KeyboardAnimationInfo {
     
     private static let keyboardNotificationNames: [String] = [
