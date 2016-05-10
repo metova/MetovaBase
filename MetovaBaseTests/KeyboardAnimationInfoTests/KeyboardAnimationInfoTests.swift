@@ -11,10 +11,6 @@ import XCTest
 @testable import MetovaBase
 
 private let keyboardNotificationNames: [String] = [
-    UIWindowDidBecomeVisibleNotification,
-    UIWindowDidBecomeHiddenNotification,
-    UIWindowDidBecomeKeyNotification,
-    UIWindowDidResignKeyNotification,
     UIKeyboardWillShowNotification,
     UIKeyboardDidShowNotification,
     UIKeyboardWillHideNotification,

@@ -37,34 +37,6 @@ import Foundation
  For more information about the on-screen keyboard, see [Managing the Keyboard](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html).
  */
 @objc public protocol KeyboardNotificationDelegate: class {
-
-    /**
-     Called when the [`UIWindowDidBecomeVisibleNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIWindowDidBecomeVisibleNotification) is fired.
-     
-     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
-     */
-    optional func keyboardDidBecomeVisible(notification: NSNotification)
-    
-    /**
-     Called when the [`UIWindowDidBecomeHiddenNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIWindowDidBecomeHiddenNotification) is fired.
-     
-     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
-     */
-    optional func keyboardDidBecomeHidden(notification: NSNotification)
-    
-    /**
-     Called when the [`UIWindowDidBecomeKeyNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIWindowDidBecomeKeyNotification) is fired.
-     
-     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
-     */
-    optional func keyboardDidBecomeKey(notification: NSNotification)
-    
-    /**
-     Called when the [`UIWindowDidResignKeyNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIWindowDidResignKeyNotification) is fired.
-     
-     - parameter notification: A notification containing information about the keyboard appearance and location.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
-     */
-    optional func keyboardDidResignKey(notification: NSNotification)
     
     /**
      Called when the [`UIKeyboardWillShowNotification`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/c/data/UIKeyboardWillShowNotification) is fired.
