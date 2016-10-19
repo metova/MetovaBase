@@ -35,7 +35,7 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
     
     // MARK: Properties
     
-    let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    let window = UIWindow(frame: UIScreen.main.bounds)
     
     
     
@@ -53,9 +53,9 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         
         testVC.loadView()
         testVC.viewDidLoad()
-        testVC.view.frame = UIScreen.mainScreen().bounds
+        testVC.view.frame = UIScreen.main.bounds
         
-        let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
+        let scrollView = UIScrollView(frame: UIScreen.main.bounds)
         testVC.view.addSubview(scrollView)
         
         return (testVC: testVC, scrollView: scrollView)
@@ -63,13 +63,13 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
     
     
     
-    func simulateNotificationWithKeyboardHeight(keyboardHeight: CGFloat, testVC: BaseViewController, scrollView: UIScrollView) {
+    func simulateNotification(withKeyboardHeight keyboardHeight: CGFloat, testVC: BaseViewController, scrollView: UIScrollView) {
         
-        let userInfo: [NSObject: AnyObject] = [
-            UIKeyboardFrameEndUserInfoKey: NSValue(CGRect: CGRect(x: 0, y: UIScreen.mainScreen().bounds.height - keyboardHeight, width: UIScreen.mainScreen().bounds.width, height: keyboardHeight))
+        let userInfo: [AnyHashable: Any] = [
+            UIKeyboardFrameEndUserInfoKey: CGRect(x: 0, y: UIScreen.main.bounds.height - keyboardHeight, width: UIScreen.main.bounds.width, height: keyboardHeight) as AnyObject
         ]
         
-        let notification = NSNotification(name: UIKeyboardWillChangeFrameNotification, object: nil, userInfo: userInfo)
+        let notification = Notification(name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, userInfo: userInfo)
         
         testVC.adjustContentInset(scrollview: scrollView, forKeyboardWillChangeFrameNotification: notification)
     }
@@ -83,19 +83,19 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         let (testVC, scrollView) = getTestVCWithFullscreenScrollView()
         
         // Simulate a keyboard appearance:
-        simulateNotificationWithKeyboardHeight(100, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 100, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 100)
         
         // Simulate keyboard frame shrinking:
-        simulateNotificationWithKeyboardHeight(80, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 80, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 80)
         
         // Simulate keyboard frame growing:
-        simulateNotificationWithKeyboardHeight(90, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 90, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 90)
         
         // Simulate keyboard dismissal:
-        simulateNotificationWithKeyboardHeight(0, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 0, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
     }
     
@@ -110,19 +110,19 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         scrollView.frame = frame
         
         // Simulate a keyboard appearance:
-        simulateNotificationWithKeyboardHeight(100, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 100, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 90)
         
         // Simulate keyboard frame shrinking:
-        simulateNotificationWithKeyboardHeight(80, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 80, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 70)
         
         // Simulate keyboard frame growing:
-        simulateNotificationWithKeyboardHeight(90, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 90, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 80)
         
         // Simulate keyboard dismissal:
-        simulateNotificationWithKeyboardHeight(0, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 0, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
     }
     
@@ -137,19 +137,19 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         scrollView.frame = frame
         
         // Simulate a keyboard appearance:
-        simulateNotificationWithKeyboardHeight(100, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 100, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
         
         // Simulate keyboard frame shrinking:
-        simulateNotificationWithKeyboardHeight(80, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 80, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
         
         // Simulate keyboard frame growing:
-        simulateNotificationWithKeyboardHeight(90, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 90, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
         
         // Simulate keyboard dismissal:
-        simulateNotificationWithKeyboardHeight(0, testVC: testVC, scrollView: scrollView)
+        simulateNotification(withKeyboardHeight: 0, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
     }
 }

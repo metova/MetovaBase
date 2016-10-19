@@ -11,12 +11,12 @@ import XCTest
 @testable import MetovaBase
 
 private let keyboardNotificationNames: [String] = [
-    UIKeyboardWillShowNotification,
-    UIKeyboardDidShowNotification,
-    UIKeyboardWillHideNotification,
-    UIKeyboardDidHideNotification,
-    UIKeyboardWillChangeFrameNotification,
-    UIKeyboardDidChangeFrameNotification
+    NSNotification.Name.UIKeyboardWillShow.rawValue,
+    NSNotification.Name.UIKeyboardDidShow.rawValue,
+    NSNotification.Name.UIKeyboardWillHide.rawValue,
+    NSNotification.Name.UIKeyboardDidHide.rawValue,
+    NSNotification.Name.UIKeyboardWillChangeFrame.rawValue,
+    NSNotification.Name.UIKeyboardDidChangeFrame.rawValue
 ]
 
 private let keyboardUserInfoKeys: [String] = [
@@ -68,7 +68,7 @@ class KeyboardAnimationInfoTests: XCTestCase {
                 XCTFail("Failed to instantiate KeyboardAnimationInfo for notification named \(notificationName).")
                 continue
             }
-            
+                        
             XCTAssertEqual(
                 kaInfo.startFrame, CGRect.zero,
                 "Incorrect start frame for notification named \(notificationName)"
@@ -85,7 +85,7 @@ class KeyboardAnimationInfoTests: XCTestCase {
             )
             
             XCTAssertEqual(
-                kaInfo.animationCurve, UIViewAnimationCurve.Linear,
+                kaInfo.animationCurve, UIViewAnimationCurve.linear,
                 "Incorrect animation curve for notification named \(notificationName)"
             )
             
@@ -99,7 +99,7 @@ class KeyboardAnimationInfoTests: XCTestCase {
     
     func testNoUserInfo() {
         for notificationName in keyboardNotificationNames {
-            let notification = NSNotification(name: notificationName, object: nil)
+            let notification = Notification(name: Notification.Name(rawValue: notificationName), object: nil)
             
             XCTAssertNil(
                 KeyboardAnimationInfo(notification: notification),

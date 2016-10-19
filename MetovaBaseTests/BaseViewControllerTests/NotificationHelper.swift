@@ -29,32 +29,32 @@
 
 import UIKit
 
-func keyboardFrameBeginNotificationNoUserInfo() -> NSNotification {
-    return NSNotification(name: UIKeyboardFrameBeginUserInfoKey, object: nil)
+func keyboardFrameBeginNotificationNoUserInfo() -> Notification {
+    return Notification(name: Notification.Name(rawValue: UIKeyboardFrameBeginUserInfoKey), object: nil)
 }
 
-func keyboardFrameEndNotificationNoUserInfo() -> NSNotification {
-    return NSNotification(name: UIKeyboardFrameEndUserInfoKey, object: nil)
+func keyboardFrameEndNotificationNoUserInfo() -> Notification {
+    return Notification(name: Notification.Name(rawValue: UIKeyboardFrameEndUserInfoKey), object: nil)
 }
 
-func keyboardFrameBeginNotification(beginFrame beginFrame: CGRect?, endFrame: CGRect?) -> NSNotification {
-    return frameNotification(UIKeyboardFrameBeginUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
+func keyboardFrameBeginNotification(beginFrame: CGRect?, endFrame: CGRect?) -> Notification {
+    return frame(withNotificationName: UIKeyboardFrameBeginUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
 }
 
-func keyboardFrameEndNotification(beginFrame beginFrame: CGRect?, endFrame: CGRect?) -> NSNotification {
-    return frameNotification(UIKeyboardFrameEndUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
+func keyboardFrameEndNotification(beginFrame: CGRect?, endFrame: CGRect?) -> Notification {
+    return frame(withNotificationName: UIKeyboardFrameEndUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
 }
 
-private func frameNotification(name: String, beginFrame: CGRect?, endFrame: CGRect?) -> NSNotification {
+private func frame(withNotificationName name: String, beginFrame: CGRect?, endFrame: CGRect?) -> Notification {
     var userInfo = [String: AnyObject]()
     
     if let beginFrame = beginFrame {
-        userInfo[UIKeyboardFrameBeginUserInfoKey] = NSValue(CGRect: beginFrame)
+        userInfo[UIKeyboardFrameBeginUserInfoKey] = beginFrame as AnyObject
     }
     
     if let endFrame = endFrame {
-        userInfo[UIKeyboardFrameEndUserInfoKey] = NSValue(CGRect: endFrame)
+        userInfo[UIKeyboardFrameEndUserInfoKey] = endFrame as AnyObject
     }
     
-    return NSNotification(name: name, object: nil, userInfo: userInfo)
+    return Notification(name: Notification.Name(rawValue: name), object: nil, userInfo: userInfo)
 }
