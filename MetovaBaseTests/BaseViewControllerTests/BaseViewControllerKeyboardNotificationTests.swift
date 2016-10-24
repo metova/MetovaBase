@@ -70,8 +70,8 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey])
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey])
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
@@ -109,8 +109,8 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey])
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey])
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
@@ -148,8 +148,8 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey])
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey])
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
@@ -187,8 +187,8 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey])
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey])
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
@@ -226,8 +226,8 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey])
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey])
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
@@ -265,8 +265,8 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey])
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey])
+                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
