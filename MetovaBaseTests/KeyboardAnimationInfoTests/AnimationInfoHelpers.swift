@@ -10,9 +10,9 @@ import UIKit
 
 private func goodUserInfo() -> [AnyHashable: Any] {
     return [
-        UIKeyboardFrameBeginUserInfoKey: CGRect.zero as AnyObject,
-        UIKeyboardFrameEndUserInfoKey: CGRect.zero as AnyObject,
-        UIKeyboardAnimationDurationUserInfoKey: 0,
+        UIKeyboardFrameBeginUserInfoKey: CGRect.zero as CGRect,
+        UIKeyboardFrameEndUserInfoKey: CGRect.zero as CGRect,
+        UIKeyboardAnimationDurationUserInfoKey: 0 as TimeInterval,
         UIKeyboardAnimationCurveUserInfoKey: UIViewAnimationCurve.linear.rawValue,
         UIKeyboardIsLocalUserInfoKey: true
     ]
