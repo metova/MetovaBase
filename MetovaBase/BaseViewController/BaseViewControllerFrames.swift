@@ -41,10 +41,11 @@ public extension BaseViewController {
     public func framesForKeyboard(notification: Notification) -> (fromFrame: CGRect, toFrame: CGRect) {
         guard let userInfo = notification.userInfo else { return (CGRect.zero, CGRect.zero) }
         
-        let fromFrame = userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect ?? CGRect.zero
-        let toFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect ?? CGRect.zero
+        let fromFrame = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue
+        let toFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue
         
-        return (fromFrame, toFrame)
+        
+        return (fromFrame?.cgRectValue ?? CGRect.zero, toFrame?.cgRectValue ?? CGRect.zero)
     }
     
     /**

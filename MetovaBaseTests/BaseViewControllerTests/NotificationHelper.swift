@@ -49,11 +49,11 @@ private func frame(withNotificationName name: String, beginFrame: CGRect?, endFr
     var userInfo = [String: AnyObject]()
     
     if let beginFrame = beginFrame {
-        userInfo[UIKeyboardFrameBeginUserInfoKey] = beginFrame as AnyObject
+        userInfo[UIKeyboardFrameBeginUserInfoKey] = NSValue(cgRect: beginFrame)
     }
     
     if let endFrame = endFrame {
-        userInfo[UIKeyboardFrameEndUserInfoKey] = endFrame as AnyObject
+        userInfo[UIKeyboardFrameEndUserInfoKey] = NSValue(cgRect: endFrame)
     }
     
     return Notification(name: Notification.Name(rawValue: name), object: nil, userInfo: userInfo)
