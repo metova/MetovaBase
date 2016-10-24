@@ -57,7 +57,9 @@ public extension BaseViewController {
     public func adjustContentInset(scrollview scrollView: UIScrollView, forKeyboardWillChangeFrameNotification notification: Notification) {
         
         if let userInfo = notification.userInfo,
-            let keyboardFrameEnd = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect {
+            let keyboardFrameEnd = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            
+            let keyboardFrameEnd = keyboardFrameEnd.cgRectValue
             
             var scrollViewDistanceToBottomOfWindow: CGFloat = 0
             
