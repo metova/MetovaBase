@@ -83,4 +83,4 @@ custom_rules:
       name: "Multiple Empty Lines"
       regex: "((?:\s*\n){3,})"
       message: "There are too many line breaks"
-      severity: error
+      #severity: error - Problems with travis
