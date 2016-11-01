@@ -71,7 +71,7 @@ public struct KeyboardAnimationInfo {
      
      - returns: The new instance, or `nil` if an invalid notification is passed in.
      */
-    init?(notification: Notification) {
+    public init?(notification: Notification) {
         guard KeyboardAnimationInfo.keyboardNotificationNames.contains(notification.name.rawValue) else {
             return nil
         }
