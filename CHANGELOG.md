@@ -1,10 +1,16 @@
 # MetovaBase CHANGELOG
 
+## 1.0.0
+
+Updated syntax for Swift 3.
+
+Renamed a couple KeyboardNotificationDelegate methods to be more consistently named after the notifications that trigger them.
+
 ## 0.2.5
 
-Added KeyboardAnimationInfo struct which makes getting keyboard animation information significantly easier
+Added KeyboardAnimationInfo struct which makes getting keyboard animation information significantly easier.
 
-Improved testing code coverage
+Improved testing code coverage.
 
 ## 0.2.4
 
