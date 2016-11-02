@@ -37,8 +37,6 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
     
     let window = UIWindow(frame: UIScreen.main.bounds)
     
-    
-    
     // MARK: Helper
     
     func getTestVCWithFullscreenScrollView() -> (testVC: BaseViewController, scrollView: UIScrollView) {
@@ -61,8 +59,6 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         return (testVC: testVC, scrollView: scrollView)
     }
     
-    
-    
     func simulateNotification(withKeyboardHeight keyboardHeight: CGFloat, testVC: BaseViewController, scrollView: UIScrollView) {
         
         let userInfo: [AnyHashable: Any] = [
@@ -73,8 +69,6 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         
         testVC.adjustContentInset(scrollview: scrollView, forKeyboardWillChangeFrameNotification: notification)
     }
-    
-    
     
     // MARK: Tests
     
@@ -98,8 +92,6 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         simulateNotification(withKeyboardHeight: 0, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
     }
-    
-    
     
     func testContentInsetAdjustmentForPartialScreenScrollView() {
         
@@ -125,8 +117,6 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
         simulateNotification(withKeyboardHeight: 0, testVC: testVC, scrollView: scrollView)
         XCTAssertEqual(scrollView.contentInset.bottom, 0)
     }
-    
-    
     
     func testContentInsetAdjustmentIsUnaffectedIfKeyboardDoesNotCoverScrollView() {
         
