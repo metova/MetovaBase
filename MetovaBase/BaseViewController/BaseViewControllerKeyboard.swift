@@ -32,26 +32,26 @@ import UIKit
 extension BaseViewController: KeyboardNotificationDelegate {
     
     func addKeyboardNotifications() {
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillShow(_:)), forNotificationName: UIKeyboardWillShowNotification)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidShow(_:)), forNotificationName: UIKeyboardDidShowNotification)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillChange(_:)), forNotificationName: UIKeyboardWillChangeFrameNotification)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidChange(_:)), forNotificationName: UIKeyboardDidChangeFrameNotification)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillHide(_:)), forNotificationName: UIKeyboardWillHideNotification)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidHide(_:)), forNotificationName: UIKeyboardDidHideNotification)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillShow(notification:)), forNotification: Notification.Name.UIKeyboardWillShow)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidShow(notification:)), forNotification: Notification.Name.UIKeyboardDidShow)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillChange(notification:)), forNotification: Notification.Name.UIKeyboardWillChangeFrame)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidChange(notification:)), forNotification:Notification.Name.UIKeyboardDidChangeFrame)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillHide(notification:)), forNotification: Notification.Name.UIKeyboardWillHide)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidHide(notification:)), forNotification: Notification.Name.UIKeyboardDidHide)
     }
     
     func removeKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillChangeFrameNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidChangeFrameNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
     
-    private func register(selector selector: Selector, forNotificationName name: String) {
-        if respondsToSelector(selector) {
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: selector, name: name, object: nil)
+    private func register(selector: Selector, forNotification name: Notification.Name) {
+        if responds(to: selector) {
+            NotificationCenter.default.addObserver(self, selector: selector, name: name, object: nil)
         }
     }
 }

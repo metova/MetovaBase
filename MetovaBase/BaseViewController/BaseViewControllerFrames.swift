@@ -38,13 +38,14 @@ public extension BaseViewController {
      
      - returns: Tuple with start and end frames
      */
-    public func framesForKeyboardNotification(notification: NSNotification) -> (fromFrame: CGRect, toFrame: CGRect) {
+    public func framesForKeyboard(notification: Notification) -> (fromFrame: CGRect, toFrame: CGRect) {
         guard let userInfo = notification.userInfo else { return (CGRect.zero, CGRect.zero) }
         
-        let fromFrame = userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue() ?? CGRect.zero
-        let toFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue() ?? CGRect.zero
+        let fromFrame = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue
+        let toFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue
         
-        return (fromFrame, toFrame)
+        
+        return (fromFrame?.cgRectValue ?? CGRect.zero, toFrame?.cgRectValue ?? CGRect.zero)
     }
     
     /**
@@ -53,20 +54,22 @@ public extension BaseViewController {
      - parameter scrollView:   The scroll view to adjust.
      - parameter notification: The notification for keyboardWillChangeFrame.
      */
-    public func adjustContentInset(scrollview scrollView: UIScrollView, forKeyboardWillChangeFrameNotification notification: NSNotification) {
+    public func adjustContentInset(scrollview scrollView: UIScrollView, forKeyboardWillChangeFrameNotification notification: Notification) {
         
-        if let userInfo = notification.userInfo as? [String: AnyObject],
-            let keyboardFrameEnd = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue() {
+        if let userInfo = notification.userInfo,
+            let keyboardFrameEnd = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            
+            let keyboardFrameEnd = keyboardFrameEnd.cgRectValue
             
             var scrollViewDistanceToBottomOfWindow: CGFloat = 0
             
             if let window = view.window {
-                let rectInWindow = window.convertRect(scrollView.frame, fromView: scrollView.superview)
-                scrollViewDistanceToBottomOfWindow = CGRectGetHeight(window.frame) - rectInWindow.height - rectInWindow.origin.y
+                let rectInWindow = window.convert(scrollView.frame, from: scrollView.superview)
+                scrollViewDistanceToBottomOfWindow = window.frame.height - rectInWindow.height - rectInWindow.origin.y
             }
             
             var inset = scrollView.contentInset
-            inset.bottom = max(0.0, UIScreen.mainScreen().bounds.size.height - keyboardFrameEnd.origin.y - scrollViewDistanceToBottomOfWindow)
+            inset.bottom = max(0.0, UIScreen.main.bounds.size.height - keyboardFrameEnd.origin.y - scrollViewDistanceToBottomOfWindow)
             scrollView.contentInset = inset
             scrollView.scrollIndicatorInsets = scrollView.contentInset
         }

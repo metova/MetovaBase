@@ -8,22 +8,22 @@
 
 import UIKit
 
-private func goodUserInfo() -> [NSObject: AnyObject] {
+private func goodUserInfo() -> [AnyHashable: Any] {
     return [
-        UIKeyboardFrameBeginUserInfoKey: NSValue(CGRect: CGRect.zero),
-        UIKeyboardFrameEndUserInfoKey: NSValue(CGRect: CGRect.zero),
-        UIKeyboardAnimationDurationUserInfoKey: 0,
-        UIKeyboardAnimationCurveUserInfoKey: UIViewAnimationCurve.Linear.rawValue,
+        UIKeyboardFrameBeginUserInfoKey: CGRect.zero,
+        UIKeyboardFrameEndUserInfoKey: CGRect.zero,
+        UIKeyboardAnimationDurationUserInfoKey: 0 as TimeInterval,
+        UIKeyboardAnimationCurveUserInfoKey: UIViewAnimationCurve.linear.rawValue,
         UIKeyboardIsLocalUserInfoKey: true
     ]
 }
 
-func keyboardNotification(name name: String, missingKeys: [String]? = nil) -> NSNotification {
-    var userInfo = goodUserInfo() as [NSObject: AnyObject]
+func keyboardNotification(name: String, missingKeys: [String]? = nil) -> Notification {
+    var userInfo = goodUserInfo() as [AnyHashable: Any]
     
     missingKeys?.forEach { key in
         userInfo[key] = nil
     }
     
-    return NSNotification(name: name, object: nil, userInfo: userInfo)
+    return Notification(name: Notification.Name(rawValue: name), object: nil, userInfo: userInfo)
 }

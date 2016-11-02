@@ -41,7 +41,7 @@ class BaseViewControllerFramesTests: XCTestCase {
         
         let beginNotification = keyboardFrameBeginNotification(beginFrame: beginFromFrame, endFrame: beginToFrame)
         
-        let beginFrames = baseViewController.framesForKeyboardNotification(beginNotification)
+        let beginFrames = baseViewController.framesForKeyboard(notification: beginNotification)
         
         XCTAssertEqual(beginFrames.fromFrame, beginFromFrame)
         XCTAssertEqual(beginFrames.toFrame, beginToFrame)
@@ -52,7 +52,7 @@ class BaseViewControllerFramesTests: XCTestCase {
         
         let beginNotification = keyboardFrameBeginNotification(beginFrame: beginFromFrame, endFrame: nil)
         
-        let beginFrames = baseViewController.framesForKeyboardNotification(beginNotification)
+        let beginFrames = baseViewController.framesForKeyboard(notification: beginNotification)
         
         XCTAssertEqual(beginFrames.fromFrame, beginFromFrame)
         XCTAssertEqual(beginFrames.toFrame, CGRect.zero)
@@ -63,7 +63,7 @@ class BaseViewControllerFramesTests: XCTestCase {
         
         let beginNotification = keyboardFrameBeginNotification(beginFrame: nil, endFrame: beginToFrame)
         
-        let beginFrames = baseViewController.framesForKeyboardNotification(beginNotification)
+        let beginFrames = baseViewController.framesForKeyboard(notification: beginNotification)
         
         XCTAssertEqual(beginFrames.fromFrame, CGRect.zero)
         XCTAssertEqual(beginFrames.toFrame, beginToFrame)
@@ -72,7 +72,7 @@ class BaseViewControllerFramesTests: XCTestCase {
     func testFrameHelperBeginWithMissingBothFrames() {
         let beginNotification = keyboardFrameBeginNotification(beginFrame: nil, endFrame: nil)
         
-        let beginFrames = baseViewController.framesForKeyboardNotification(beginNotification)
+        let beginFrames = baseViewController.framesForKeyboard(notification: beginNotification)
         
         XCTAssertEqual(beginFrames.fromFrame, CGRect.zero)
         XCTAssertEqual(beginFrames.toFrame, CGRect.zero)
@@ -81,7 +81,7 @@ class BaseViewControllerFramesTests: XCTestCase {
     func testFrameHelperBeginMissingUserInfo() {
         let beginNotification = keyboardFrameBeginNotificationNoUserInfo()
         
-        let beginFrames = baseViewController.framesForKeyboardNotification(beginNotification)
+        let beginFrames = baseViewController.framesForKeyboard(notification: beginNotification)
         
         XCTAssertEqual(beginFrames.fromFrame, CGRect.zero)
         XCTAssertEqual(beginFrames.toFrame, CGRect.zero)
@@ -93,7 +93,7 @@ class BaseViewControllerFramesTests: XCTestCase {
         
         let endNotification = keyboardFrameEndNotification(beginFrame: endFromFrame, endFrame: endToFrame)
         
-        let endFrames = baseViewController.framesForKeyboardNotification(endNotification)
+        let endFrames = baseViewController.framesForKeyboard(notification: endNotification)
         
         XCTAssertEqual(endFrames.fromFrame, endFromFrame)
         XCTAssertEqual(endFrames.toFrame, endToFrame)
@@ -104,7 +104,7 @@ class BaseViewControllerFramesTests: XCTestCase {
         
         let endNotification = keyboardFrameBeginNotification(beginFrame: endFromFrame, endFrame: nil)
         
-        let endFrames = baseViewController.framesForKeyboardNotification(endNotification)
+        let endFrames = baseViewController.framesForKeyboard(notification: endNotification)
         
         XCTAssertEqual(endFrames.fromFrame, endFromFrame)
         XCTAssertEqual(endFrames.toFrame, CGRect.zero)
@@ -115,7 +115,7 @@ class BaseViewControllerFramesTests: XCTestCase {
         
         let endNotification = keyboardFrameBeginNotification(beginFrame: nil, endFrame: endToFrame)
         
-        let endFrames = baseViewController.framesForKeyboardNotification(endNotification)
+        let endFrames = baseViewController.framesForKeyboard(notification: endNotification)
         
         XCTAssertEqual(endFrames.fromFrame, CGRect.zero)
         XCTAssertEqual(endFrames.toFrame, endToFrame)
@@ -124,7 +124,7 @@ class BaseViewControllerFramesTests: XCTestCase {
     func testFrameHelperEndWithMissingBothFrames() {
         let endNotification = keyboardFrameBeginNotification(beginFrame: nil, endFrame: nil)
         
-        let endFrames = baseViewController.framesForKeyboardNotification(endNotification)
+        let endFrames = baseViewController.framesForKeyboard(notification: endNotification)
         
         XCTAssertEqual(endFrames.fromFrame, CGRect.zero)
         XCTAssertEqual(endFrames.toFrame, CGRect.zero)
@@ -133,7 +133,7 @@ class BaseViewControllerFramesTests: XCTestCase {
     func testFrameHelperEndMissingUserInfo() {
         let endNotification = keyboardFrameBeginNotificationNoUserInfo()
         
-        let endFrames = baseViewController.framesForKeyboardNotification(endNotification)
+        let endFrames = baseViewController.framesForKeyboard(notification: endNotification)
         
         XCTAssertEqual(endFrames.fromFrame, CGRect.zero)
         XCTAssertEqual(endFrames.toFrame, CGRect.zero)

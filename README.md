@@ -1,6 +1,6 @@
 # MetovaBase
 
-[![Build Status](https://travis-ci.org/metova/MetovaBase.svg)](https://travis-ci.org/metova/MetovaBase)
+[![Build Status](https://travis-ci.org/metova/MetovaBase.svg?branch=master)](https://travis-ci.org/metova/MetovaBase)
 [![CocoaPods Compatible](http://cocoapod-badges.herokuapp.com/v/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/MetovaBase.svg)](http://cocoadocs.org/docsets/MetovaBase/)
 [![Coverage Status](https://coveralls.io/repos/github/metova/MetovaBase/badge.svg?branch=master)](https://coveralls.io/github/metova/MetovaBase?branch=master)
@@ -10,7 +10,7 @@
 ## Requirements
 
  - iOS 8.0
- - Swift 2.2
+ - Swift 3.0
 
 ## Installation
 
