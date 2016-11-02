@@ -34,8 +34,8 @@ extension BaseViewController: KeyboardNotificationDelegate {
     func addKeyboardNotifications() {
         register(selector: #selector(KeyboardNotificationDelegate.keyboardWillShow(notification:)), forNotification: Notification.Name.UIKeyboardWillShow)
         register(selector: #selector(KeyboardNotificationDelegate.keyboardDidShow(notification:)), forNotification: Notification.Name.UIKeyboardDidShow)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillChange(notification:)), forNotification: Notification.Name.UIKeyboardWillChangeFrame)
-        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidChange(notification:)), forNotification:Notification.Name.UIKeyboardDidChangeFrame)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardWillChangeFrame(notification:)), forNotification: Notification.Name.UIKeyboardWillChangeFrame)
+        register(selector: #selector(KeyboardNotificationDelegate.keyboardDidChangeFrame(notification:)), forNotification:Notification.Name.UIKeyboardDidChangeFrame)
         register(selector: #selector(KeyboardNotificationDelegate.keyboardWillHide(notification:)), forNotification: Notification.Name.UIKeyboardWillHide)
         register(selector: #selector(KeyboardNotificationDelegate.keyboardDidHide(notification:)), forNotification: Notification.Name.UIKeyboardDidHide)
     }

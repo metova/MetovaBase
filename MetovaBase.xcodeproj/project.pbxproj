@@ -97,9 +97,9 @@
 		4A11D7631CCAEBB900E4C363 = {
 			isa = PBXGroup;
 			children = (
-				4A8A5A431CCBE133005CB318 /* Related Files */,
 				4A11D7711CCAEC3400E4C363 /* MetovaBase */,
 				4A11D77D1CCAEC3400E4C363 /* MetovaBaseTests */,
+				4A8A5A431CCBE133005CB318 /* Related Files */,
 				4A11D7701CCAEC3400E4C363 /* Products */,
 			);
 			sourceTree = "<group>";

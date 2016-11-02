@@ -136,12 +136,12 @@ class KeyboardNotificationTests: XCTestCase {
         waitForExpectations(timeout: 0, handler: nil)
     }
     
-    func testWillChangeNotification() {
+    func testWillChangeFrameNotification() {
         class WillChangeMethodClass: BaseViewController {
             
             var expectation: XCTestExpectation?
             
-            @objc func keyboardWillChange(notification: Notification) {
+            @objc func keyboardWillChangeFrame(notification: Notification) {
                 defer { expectation?.fulfill() }
                 guard let userInfo = notification.userInfo else {
                     XCTFail("Failed to get user info dictionary")
@@ -175,12 +175,12 @@ class KeyboardNotificationTests: XCTestCase {
         waitForExpectations(timeout: 0, handler: nil)
     }
     
-    func testDidChangeNotification() {
+    func testDidChangeFrameNotification() {
         class DidChangeMethodClass: BaseViewController {
             
             var expectation: XCTestExpectation?
             
-            @objc func keyboardWillChange(notification: Notification) {
+            @objc func keyboardWillChangeFrame(notification: Notification) {
                 defer { expectation?.fulfill() }
                 guard let userInfo = notification.userInfo else {
                     XCTFail("Failed to get user info dictionary")
