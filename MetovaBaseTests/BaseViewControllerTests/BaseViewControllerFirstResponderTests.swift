@@ -33,6 +33,6 @@ import XCTest
 
 class BaseViewControllerFirstResponderTests: XCTestCase {
 
-// TODO: Write tests around `dismissKeyboard()` method.
+// TODO: Write tests around `dismissKeyboard()` method. (https://github.com/metova/MetovaBase/issues/1)
 
 }

@@ -44,7 +44,6 @@ public extension BaseViewController {
         let fromFrame = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue
         let toFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue
         
-        
         return (fromFrame?.cgRectValue ?? CGRect.zero, toFrame?.cgRectValue ?? CGRect.zero)
     }
     
