@@ -1,4 +1,4 @@
-[![MetovaBase](Assets/MetovaBase.png)](https://cocoapods.org/pods/metova_base.png)
+[![MetovaBase](Assets/metova_base.png)](https://cocoapods.org/pods/MetovaBase)
 
 [![Build Status](https://travis-ci.org/metova/MetovaBase.svg?branch=master)](https://travis-ci.org/metova/MetovaBase)
 [![CocoaPods Compatible](http://cocoapod-badges.herokuapp.com/v/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
