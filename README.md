@@ -49,8 +49,7 @@ Additionally, `BaseViewController` unregisters your view controller from receivi
 
 ## KeyboardNotificationDelegate
 
-This protocol contains a collection of methods which `BaseViewController` subclasses (or extensions) can implement in order to hear about keyboard notifications.  
-As already stated, you do not need to register or unregister for these notifications in your subclass or extension--you simply need to implement these methods.
+This protocol contains a collection of methods which `BaseViewController` subclasses (or extensions) can implement in order to hear about keyboard notifications. As already stated, you do not need to register or unregister for these notifications in your subclass or extension--you simply need to implement these methods.
 
 `BaseViewController` uses the `respondsToSelector:` method on itself to determine whether or not it should register for these notifications. 
  As such, if implementing these in Swift, you must mark them as either `@objc` or `dynamic`.  If not, they are not implemented as selectors and `respondsToSelector:` returns `false`.
