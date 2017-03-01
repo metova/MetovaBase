@@ -25,8 +25,8 @@ MetovaBase offers useful UIKit subclasses that implement commonly used utilities
 
 ## BaseViewController
 
-The `BaseViewController` class extends from `UIViewController` and adds useful, common utility that we have found ourselves adding in most, if not all, of our view controller classes.
-It does some additional set up in `viewDidLoad` to provide your view controller with keyboard notifications.  If overriding, be sure to call `super.viewDidLoad` in your subclass.
+The `BaseViewController` class extends from `UIViewController` and adds a common utility that we have found ourselves adding in most, if not all, of our view controller classes.
+It does some additional setup in `viewDidLoad` to provide your view controller with keyboard notifications.  If overriding, be sure to call `super.viewDidLoad` in your subclass.
 
 ### Example usage:
 
@@ -56,46 +56,26 @@ This protocol contains a collection of methods which `BaseViewController` subcla
  
 ### Methods
  
+ These methods are called when the appropriate keyboard notification is fired.
+ 
  ```swift
 optional func keyboardWillShow(notification: Notification)
+
+optional func keyboardDidShow(notification: Notification)
+
+optional func keyboardWillChangeFrame(notification: Notification)
+
+optional func keyboardDidChangeFrame(notification: Notification)
+
+optional func keyboardWillHide(notification: Notification)
+
+optional func keyboardDidHide(notification: Notification)
  ```
- 
- Called when the [`UIKeyboardWillShowNotification`](https://developer.apple.com/reference/foundation/nsnotification.name/1621576-uikeyboardwillshow) is fired.
- 
- ```swift
- optional func keyboardDidShow(notification: Notification)
- ```
- 
- Called when the [`UIKeyboardDidShowNotification`](https://developer.apple.com/reference/foundation/nsnotification.name/1621602-uikeyboarddidshow) is fired.
- 
- ```swift
- optional func keyboardWillChangeFrame(notification: Notification)
- ```
- 
- Called when the [`UIKeyboardWillChangeFrameNotification`](https://developer.apple.com/reference/foundation/nsnotification.name/1621623-uikeyboardwillchangeframe) is fired.
- 
- ``` swift
- optional func keyboardDidChangeFrame(notification: Notification)
- ```
- 
- Called when the [`UIKeyboardDidChangeFrameNotification`](https://developer.apple.com/reference/foundation/nsnotification.name/1621619-uikeyboarddidchangeframe) is fired.
- 
- ```swift
- optional func keyboardWillHide(notification: Notification)
- ```
- 
- Called when the [`UIKeyboardWillHideNotification`](https://developer.apple.com/reference/foundation/nsnotification.name/1621606-uikeyboardwillhide) is fired.
- 
- ```swift
- optional func keyboardDidHide(notification: Notification)
- ```
- 
- Called when the [`UIKeyboardDidHideNotification`](https://developer.apple.com/reference/foundation/nsnotification.name/1621579-uikeyboarddidhide) is fired.
  
 
 ## BaseViewControllerConvenience
 
-`BaseViewControllerConvenience` provides a convenience method to dismiss the keyboard. It assumes the active first responder is in your view controller's view.
+`BaseViewControllerConvenience` provides a convenience method to dismiss the keyboard. It assumes the first responder is a descendant of your view controller's view.
 Since it is an extension of `BaseViewController` you can call the method anywhere in your `BaseViewController` subclass like so:
 
 ```swift
