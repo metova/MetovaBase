@@ -97,7 +97,7 @@ optional func keyboardWillShow(notification: Notification)
 ## BaseViewControllerConvenience
 
 `BaseViewControllerConvenience` provides a convenience method to dismiss the keyboard. It assumes the active first responder is in your view controller's view.
-Since it is an extension of `BaseViewController` you can call the method anywhere in you `BaseViewController` subclass like so:
+Since it is an extension of `BaseViewController` you can call the method anywhere in your `BaseViewController` subclass like so:
 
 ```swift
 dismissKeyboard()
