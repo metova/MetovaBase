@@ -97,7 +97,7 @@ If there is no frame information in the notification object, `CGRect.zero` is re
 public func adjustContentInset(scrollview scrollView: UIScrollView, forKeyboardWillChangeFrameNotification notification: Notification)
 ```
 
-As can be surmised by the name, this method adjusts the scrollview's inset based on the keyboard frame. This is helpful for views where they keyboard may cover up
+As can be surmised by the name, this method adjusts the scrollview's inset based on the keyboard frame. This is helpful for views where the keyboard may cover up
 the first responder.
 
 #### Example Usage
