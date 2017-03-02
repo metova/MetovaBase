@@ -1,4 +1,4 @@
-# MetovaBase
+[![MetovaBase](Assets/metova_base.png)](https://cocoapods.org/pods/MetovaBase)
 
 [![Build Status](https://travis-ci.org/metova/MetovaBase.svg?branch=master)](https://travis-ci.org/metova/MetovaBase)
 [![CocoaPods Compatible](http://cocoapod-badges.herokuapp.com/v/MetovaBase/badge.png)](http://cocoadocs.org/docsets/MetovaBase)
@@ -131,6 +131,10 @@ class MyViewController: BaseViewController, KeyboardNotificationDelegate {
 MetovaBase is owned and maintained by [Metova Inc.](https://metova.com)
 
 [Contributors](https://github.com/Metova/MetovaBase/graphs/contributors)
+
+If you would like to contribute to Metova Test Kit, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+ 
+Metova Test Kit banner image and other assets provided by Christi Johnson.
 
 ## License
 
