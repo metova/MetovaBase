@@ -90,7 +90,7 @@ available anywhere in your `BaseViewController` subclass.
 public func framesForKeyboard(notification: Notification) -> (fromFrame: CGRect, toFrame: CGRect) 
 ```
 
-This method returns the starting and ending frames of the keyboard. It parses the frame information out of the notification that is passed in.
+This method returns the starting and ending frames of the keyboard. It parses the frame information from the notification that is passed in.
 If there is no frame information in the notification object, `CGRect.zero` is returned.
 
 ```swift
@@ -108,7 +108,6 @@ import MetovaBase
 class MyViewController: BaseViewController, KeyboardNotificationDelegate {
 
 	@IBOutlet myScrollView: UIScrollView!
-
 
 	func keyboardDidChangeFrame(notification: Notification) {
 	
