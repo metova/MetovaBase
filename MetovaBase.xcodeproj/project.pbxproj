@@ -71,6 +71,7 @@
 		4AD7CB6F1CCC05B60006C1A5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		6E08D1FD1CCFAD6A00426439 /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		6EF706091DCB8654008BC0EB /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
 		E6A6500A1DC03F27008B8D5C /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		E6A6500C1DC03FE5008B8D5C /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +194,7 @@
 				4AB9A3E61CDFB9BB0021B6B8 /* CONTRIBUTING.md */,
 				4A8A5A441CCBE1D7005CB318 /* README.md */,
 				4A8A5A411CCBE10B005CB318 /* MetovaBase.podspec */,
+				6EF706091DCB8654008BC0EB /* .ruby-version */,
 			);
 			name = "Related Files";
 			sourceTree = "<group>";

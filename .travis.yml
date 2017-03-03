@@ -8,13 +8,14 @@ env:
   - IOS_FRAMEWORK_SCHEME="MetovaBase-iOS"
   - IOS_SDK=iphonesimulator10.0
   matrix:
-    - DESTINATION="OS=10.0,name=iPhone 6S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
+    - DESTINATION="OS=10.0,name=iPhone 7"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
 before_install:
-  - brew install swiftlint
+  - rvm use 2.3.0
+install:
+  - bundle install --without=documentation
 script:
   - set -o pipefail
   - xcodebuild -version
-#  - xcodebuild -showsdks
 
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
@@ -30,3 +31,4 @@ script:
 after_success:
  - bundle binstub slather
  - bin/slather coverage --binary-basename MetovaBase
+ - sleep 5 # https://github.com/travis-ci/travis-ci/issues/4725
