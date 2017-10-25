@@ -250,7 +250,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0.5, handler: nil)
+        waitForExpectations(timeout: 0, handler: nil)
     }
     
     func testDidHideNotification() {
