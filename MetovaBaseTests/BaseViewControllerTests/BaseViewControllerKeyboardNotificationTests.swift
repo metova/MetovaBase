@@ -55,7 +55,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
 
     func testWillShowNotification() {
@@ -94,7 +94,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testDidShowNotification() {
@@ -133,7 +133,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testWillChangeFrameNotification() {
@@ -172,7 +172,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testDidChangeFrameNotification() {
@@ -211,7 +211,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testWillHideNotification() {
@@ -250,7 +250,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testDidHideNotification() {
@@ -289,7 +289,7 @@ class KeyboardNotificationTests: XCTestCase {
             postKeyboardNotifications()
         }
         
-        waitForExpectations(timeout: 0, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
 }
 
