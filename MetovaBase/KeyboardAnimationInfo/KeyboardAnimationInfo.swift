@@ -56,8 +56,8 @@ public struct KeyboardAnimationInfo {
     /// Defines how the keyboard will be animated onto or off the screen.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardAnimationCurveUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     public let animationCurve: UIViewAnimationCurve
     
-    @available (iOS 9.0, *)
     /// Identifies whether the keyboard belongs to the current app. With multitasking on iPad, all visible apps are notified when the keyboard appears and disappears. The value of this property is `true` for the app that caused the keyboard to appear and `false` for any other apps.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardIsLocalUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
+    @available (iOS 9.0, *)
     public var isLocalUser: Bool {
         return _isLocalUser
     }
