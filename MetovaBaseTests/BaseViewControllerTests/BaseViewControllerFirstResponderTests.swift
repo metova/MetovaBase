@@ -32,7 +32,37 @@ import XCTest
 @testable import MetovaBase
 
 class BaseViewControllerFirstResponderTests: XCTestCase {
+    
+    // MARK: - Properties
+    
+    let testWindow = UIWindow(frame: UIScreen.main.bounds)
+    
+    // MARK: - Tests
+    
+    func testDismissKeyboard() {
+        
+        let testViewController = TestViewController()
+        testWindow.addSubview(testViewController.view)
+        
+        testViewController.testTextField.becomeFirstResponder()
+        XCTAssertTrue(testViewController.testTextField.isFirstResponder, "As a test setup criteria, the text field should be the first responder.")
+        
+        testViewController.dismissKeyboard()
+        XCTAssertFalse(testViewController.testTextField.isFirstResponder, "The text field's first responder status should be resigned in order to dismiss the keyboard.")
+    }
+}
 
-// TODO: Write tests around `dismissKeyboard()` method. (https://github.com/metova/MetovaBase/issues/1)
-
+extension BaseViewControllerFirstResponderTests {
+    
+    class TestViewController: BaseViewController {
+        
+        let testTextField = UITextField()
+        
+        override func loadView() {
+            
+            let rootView = UIView()
+            rootView.addSubview(testTextField)
+            view = rootView
+        }
+    }
 }
