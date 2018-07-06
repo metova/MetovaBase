@@ -79,6 +79,12 @@ Since it is an extension of `BaseViewController`, you can call the method anywhe
 dismissKeyboard()
 ```
 
+Or as a selector like so:
+
+```swift
+dismissGestureRecognizer.addTarget(self, action: #selector(dismissKeyboard))
+```
+
 ## BaseViewControllerFrames
 
 `BaseViewControllerFrames` provides some additional helper methods for handling the keyboard in your view controller. Again, this extends `BaseViewController`, so these methods are 
