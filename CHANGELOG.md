@@ -1,6 +1,6 @@
 # MetovaBase CHANGELOG
 
-## 2.0.0
+## 1.1.0
 
 Updated for Swift 4.
 
