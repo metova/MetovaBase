@@ -56,17 +56,17 @@ This protocol contains a collection of methods which `BaseViewController` subcla
  These methods are called when the appropriate keyboard notification is fired.
  
  ```swift
-optional func keyboardWillShow(notification: Notification)
+@objc optional func keyboardWillShow(notification: Notification)
 
-optional func keyboardDidShow(notification: Notification)
+@objc optional func keyboardDidShow(notification: Notification)
 
-optional func keyboardWillChangeFrame(notification: Notification)
+@objc optional func keyboardWillChangeFrame(notification: Notification)
 
-optional func keyboardDidChangeFrame(notification: Notification)
+@objc optional func keyboardDidChangeFrame(notification: Notification)
 
-optional func keyboardWillHide(notification: Notification)
+@objc optional func keyboardWillHide(notification: Notification)
 
-optional func keyboardDidHide(notification: Notification)
+@objc optional func keyboardDidHide(notification: Notification)
  ```
  
 
@@ -77,6 +77,12 @@ Since it is an extension of `BaseViewController`, you can call the method anywhe
 
 ```swift
 dismissKeyboard()
+```
+
+Or as a selector like so:
+
+```swift
+dismissGestureRecognizer.addTarget(self, action: #selector(dismissKeyboard))
 ```
 
 ## BaseViewControllerFrames
@@ -109,7 +115,7 @@ class MyViewController: BaseViewController, KeyboardNotificationDelegate {
 
 	@IBOutlet myScrollView: UIScrollView!
 
-	func keyboardDidChangeFrame(notification: Notification) {
+	@objc func keyboardDidChangeFrame(notification: Notification) {
 	
 		let frames = framesForKeyboard(notification: notification)
 		let fromFrame = frames.fromFrame
@@ -118,7 +124,7 @@ class MyViewController: BaseViewController, KeyboardNotificationDelegate {
 		// do whatever you need to with the 'fromFrame' and 'toFrame'
 	}
 
-	func keyboardWillChangeFrame(notification: Notification) {
+	@objc func keyboardWillChangeFrame(notification: Notification) {
 
 		adjustContentInset(scrollView: myScrollView, forKeyboardWillChangeNotification: notification)
 	}

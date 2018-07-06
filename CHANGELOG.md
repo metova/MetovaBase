@@ -1,5 +1,9 @@
 # MetovaBase CHANGELOG
 
+## 1.1.0
+
+Updated for Swift 4.
+
 ## 1.0.0
 
 Updated syntax for Swift 3.

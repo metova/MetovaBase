@@ -34,7 +34,7 @@ public extension BaseViewController {
     /**
      Parses keyboard frames out of keyboard notification.
      
-     - parameter notification: Keyboard natification
+     - parameter notification: Keyboard notification
      
      - returns: Tuple with start and end frames
      */
