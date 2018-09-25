@@ -37,16 +37,16 @@ class KeyboardNotificationTests: XCTestCase {
     func testNoMethodsImplemented() {
         class NoKeyboardMethodsClass: BaseViewController {}
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = NoKeyboardMethodsClass()
@@ -70,21 +70,21 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = WillShowMethodClass()
@@ -109,21 +109,21 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = DidShowMethodClass()
@@ -148,21 +148,21 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = WillChangeMethodClass()
@@ -187,21 +187,21 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = DidChangeMethodClass()
@@ -226,21 +226,21 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = WillHideMethodClass()
@@ -265,21 +265,21 @@ class KeyboardNotificationTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertNotNil(userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect)
-                XCTAssertNotNil(userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect)
+                XCTAssertNotNil(userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)
             }
         }
         
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeVisible, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeHidden, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidBecomeKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIWindowDidResignKey, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidShow, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardWillHide, object: nil, handler: nil)
-        expectation(forNotification: NSNotification.Name.UIKeyboardDidHide, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeVisibleNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeHiddenNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didBecomeKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIWindow.didResignKeyNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidShowNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidChangeFrameNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardWillHideNotification, object: nil, handler: nil)
+        expectation(forNotification: UIResponder.keyboardDidHideNotification, object: nil, handler: nil)
         
         MBAssertNoException {
             let testObject = DidHideMethodClass()
@@ -296,21 +296,21 @@ class KeyboardNotificationTests: XCTestCase {
 private func postKeyboardNotifications() {
 
     let keyboardNotificationNames = [
-        NSNotification.Name.UIWindowDidBecomeVisible,
-        NSNotification.Name.UIWindowDidBecomeHidden,
-        NSNotification.Name.UIWindowDidBecomeKey,
-        NSNotification.Name.UIWindowDidResignKey,
-        NSNotification.Name.UIKeyboardWillShow,
-        NSNotification.Name.UIKeyboardDidShow,
-        NSNotification.Name.UIKeyboardWillHide,
-        NSNotification.Name.UIKeyboardDidHide,
-        NSNotification.Name.UIKeyboardWillChangeFrame,
-        NSNotification.Name.UIKeyboardDidChangeFrame
+        UIWindow.didBecomeVisibleNotification,
+        UIWindow.didBecomeHiddenNotification,
+        UIWindow.didBecomeKeyNotification,
+        UIWindow.didResignKeyNotification,
+        UIResponder.keyboardWillShowNotification,
+        UIResponder.keyboardDidShowNotification,
+        UIResponder.keyboardWillHideNotification,
+        UIResponder.keyboardDidHideNotification,
+        UIResponder.keyboardWillChangeFrameNotification,
+        UIResponder.keyboardDidChangeFrameNotification
     ]
     
     let userInfo = [
-        UIKeyboardFrameBeginUserInfoKey: CGRect.zero,
-        UIKeyboardFrameEndUserInfoKey: CGRect.zero
+        UIResponder.keyboardFrameBeginUserInfoKey: CGRect.zero,
+        UIResponder.keyboardFrameEndUserInfoKey: CGRect.zero
     ]
 
     for notificationName in keyboardNotificationNames {

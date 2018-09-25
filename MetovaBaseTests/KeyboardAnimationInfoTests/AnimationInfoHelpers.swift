@@ -13,7 +13,7 @@ private func goodUserInfo() -> [AnyHashable: Any] {
         UIKeyboardFrameBeginUserInfoKey: CGRect.zero,
         UIKeyboardFrameEndUserInfoKey: CGRect.zero,
         UIKeyboardAnimationDurationUserInfoKey: 0 as TimeInterval,
-        UIKeyboardAnimationCurveUserInfoKey: UIViewAnimationCurve.linear.rawValue,
+        UIKeyboardAnimationCurveUserInfoKey: UIView.AnimationCurve.linear.rawValue,
         UIKeyboardIsLocalUserInfoKey: true
     ]
 }

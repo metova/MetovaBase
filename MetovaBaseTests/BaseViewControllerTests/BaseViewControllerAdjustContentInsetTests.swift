@@ -62,10 +62,10 @@ class BVControllerAdjustContentInsetTests: XCTestCase {
     func simulateNotification(withKeyboardHeight keyboardHeight: CGFloat, testVC: BaseViewController, scrollView: UIScrollView) {
         
         let userInfo: [AnyHashable: Any] = [
-            UIKeyboardFrameEndUserInfoKey: NSValue(cgRect: CGRect(x: 0, y: UIScreen.main.bounds.height - keyboardHeight, width: UIScreen.main.bounds.width, height: keyboardHeight))
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: CGRect(x: 0, y: UIScreen.main.bounds.height - keyboardHeight, width: UIScreen.main.bounds.width, height: keyboardHeight))
         ]
         
-        let notification = Notification(name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, userInfo: userInfo)
+        let notification = Notification(name: NSNotification.Name.UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: userInfo)
         
         testVC.adjustContentInset(scrollview: scrollView, forKeyboardWillChangeFrameNotification: notification)
     }
