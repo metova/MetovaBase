@@ -36,12 +36,12 @@ import UIKit
 public struct KeyboardAnimationInfo {
     
     private static let keyboardNotificationNames: [String] = [
-        Notification.Name.UIResponder.keyboardWillShowNotification.rawValue,
-        Notification.Name.UIResponder.keyboardDidShowNotification.rawValue,
-        Notification.Name.UIResponder.keyboardWillHideNotification.rawValue,
-        Notification.Name.UIResponder.keyboardDidHideNotification.rawValue,
-        Notification.Name.UIResponder.keyboardWillChangeFrameNotification.rawValue,
-        Notification.Name.UIResponder.keyboardDidChangeFrameNotification.rawValue
+        UIResponder.keyboardWillShowNotification.rawValue,
+        UIResponder.keyboardDidShowNotification.rawValue,
+        UIResponder.keyboardWillHideNotification.rawValue,
+        UIResponder.keyboardDidHideNotification.rawValue,
+        UIResponder.keyboardWillChangeFrameNotification.rawValue,
+        UIResponder.keyboardDidChangeFrameNotification.rawValue
     ]
     
     /// Identifies the start frame of the keyboard in screen coordinates. These coordinates do not take into account any rotation factors applied to the window’s contents as a result of interface orientation changes. Thus, you may need to convert the rectangle to window coordinates (using the `convertRect:fromWindow:` method) or to view coordinates (using the `convertRect:fromView:` method) before using it.  This is equivalent to the value found in the user info dictionar under the `UIKeyboardFrameBeginserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
