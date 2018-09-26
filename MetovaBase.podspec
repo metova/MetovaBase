@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   }
 
   s.platform = :ios, '8.0'
+  s.swift_version = '4.2'
 
   s.source              = { :git => "https://github.com/metova/MetovaBase.git", :tag => s.version.to_s }
   s.source_files        = "MetovaBase", "MetovaBase/**/*.{h,m,swift}"
