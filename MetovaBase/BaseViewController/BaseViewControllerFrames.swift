@@ -34,15 +34,15 @@ public extension BaseViewController {
     /**
      Parses keyboard frames out of keyboard notification.
      
-     - parameter notification: Keyboard natification
+     - parameter notification: Keyboard notification
      
      - returns: Tuple with start and end frames
      */
     public func framesForKeyboard(notification: Notification) -> (fromFrame: CGRect, toFrame: CGRect) {
         guard let userInfo = notification.userInfo else { return (CGRect.zero, CGRect.zero) }
         
-        let fromFrame = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue
-        let toFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue
+        let fromFrame = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue
+        let toFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
         
         return (fromFrame?.cgRectValue ?? CGRect.zero, toFrame?.cgRectValue ?? CGRect.zero)
     }
@@ -56,7 +56,7 @@ public extension BaseViewController {
     public func adjustContentInset(scrollview scrollView: UIScrollView, forKeyboardWillChangeFrameNotification notification: Notification) {
         
         if let userInfo = notification.userInfo,
-            let keyboardFrameEnd = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardFrameEnd = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             
             let keyboardFrameEnd = keyboardFrameEnd.cgRectValue
             

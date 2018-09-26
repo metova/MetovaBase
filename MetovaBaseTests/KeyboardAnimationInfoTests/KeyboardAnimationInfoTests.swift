@@ -11,20 +11,20 @@ import XCTest
 @testable import MetovaBase
 
 private let keyboardNotificationNames: [String] = [
-    NSNotification.Name.UIKeyboardWillShow.rawValue,
-    NSNotification.Name.UIKeyboardDidShow.rawValue,
-    NSNotification.Name.UIKeyboardWillHide.rawValue,
-    NSNotification.Name.UIKeyboardDidHide.rawValue,
-    NSNotification.Name.UIKeyboardWillChangeFrame.rawValue,
-    NSNotification.Name.UIKeyboardDidChangeFrame.rawValue
+    UIResponder.keyboardWillShowNotification.rawValue,
+    UIResponder.keyboardDidShowNotification.rawValue,
+    UIResponder.keyboardWillHideNotification.rawValue,
+    UIResponder.keyboardDidHideNotification.rawValue,
+    UIResponder.keyboardWillChangeFrameNotification.rawValue,
+    UIResponder.keyboardDidChangeFrameNotification.rawValue
 ]
 
 private let keyboardUserInfoKeys: [String] = [
-    UIKeyboardFrameBeginUserInfoKey,
-    UIKeyboardFrameEndUserInfoKey,
-    UIKeyboardAnimationDurationUserInfoKey,
-    UIKeyboardAnimationCurveUserInfoKey,
-    UIKeyboardIsLocalUserInfoKey
+    UIResponder.keyboardFrameBeginUserInfoKey,
+    UIResponder.keyboardFrameEndUserInfoKey,
+    UIResponder.keyboardAnimationDurationUserInfoKey,
+    UIResponder.keyboardAnimationCurveUserInfoKey,
+    UIResponder.keyboardIsLocalUserInfoKey
 ]
 
 class KeyboardAnimationInfoTests: XCTestCase {
@@ -85,7 +85,7 @@ class KeyboardAnimationInfoTests: XCTestCase {
             )
             
             XCTAssertEqual(
-                kaInfo.animationCurve, UIViewAnimationCurve.linear,
+                kaInfo.animationCurve, UIView.AnimationCurve.linear,
                 "Incorrect animation curve for notification named \(notificationName)"
             )
             

@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4A11D77A1CCAEC3400E4C363 /* MetovaBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A11D76F1CCAEC3400E4C363 /* MetovaBase.framework */; };
-		4A9640C61CD044A30038E044 /* KeyboardAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */; };
-		4ABF787A1CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */; };
-		4ABF787C1CE14C3F00F5B674 /* AnimationInfoHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF787B1CE14C3F00F5B674 /* AnimationInfoHelpers.swift */; };
 		4AED65651CCD021A00A70087 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66162C1CCBB9970048EA51 /* BaseViewControllerKeyboardNotificationTests.swift */; };
 		4AED65661CCD021E00A70087 /* BaseViewControllerFramesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A5A3D1CCBD69F005CB318 /* BaseViewControllerFramesTests.swift */; };
 		4AED656B1CCD023100A70087 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38463B1CCAFA2A00B7A2B6 /* BaseViewController.swift */; };
@@ -24,8 +21,11 @@
 		4AED65741CCD025600A70087 /* ObjectiveCTry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616251CCBA69A0048EA51 /* ObjectiveCTry.m */; };
 		4AED65751CCD025900A70087 /* AssertNoException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6616291CCBB3D70048EA51 /* AssertNoException.swift */; };
 		4AED65761CCD02A200A70087 /* MetovaBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A11D78A1CCAF27800E4C363 /* MetovaBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AF13A93215AD9AB00AB24B8 /* KeyboardAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF13A92215AD9AB00AB24B8 /* KeyboardAnimationInfo.swift */; };
+		4AF13A96215ADBA600AB24B8 /* KeyboardAnimationInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */; };
+		4AF13A97215ADBA900AB24B8 /* AnimationInfoHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF13A8D215AD99400AB24B8 /* AnimationInfoHelpers.swift */; };
+		AB89053F0AFFBDDF48120FB3 /* Pods_MetovaBase_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973A20EFC2D80553F09659C7 /* Pods_MetovaBase_iOS.framework */; };
 		E6A6500B1DC03F27008B8D5C /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = E6A6500A1DC03F27008B8D5C /* Gemfile */; };
-		E6A6500D1DC03FE5008B8D5C /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = E6A6500C1DC03FE5008B8D5C /* .swift-version */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2256F63A8D45F6187FCBD898 /* Pods-MetovaBase-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaBase-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaBase-iOS/Pods-MetovaBase-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4A0315461CCE605300DDCB26 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4A11D76F1CCAEC3400E4C363 /* MetovaBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetovaBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A11D7791CCAEC3400E4C363 /* MetovaBase.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetovaBase.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,16 +65,17 @@
 		4A8A5A481CCBE275005CB318 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A8A5A4E1CCBE31F005CB318 /* BaseViewControllerFirstResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerFirstResponderTests.swift; sourceTree = "<group>"; };
 		4A8A5A501CCBE367005CB318 /* BaseViewControllerAdjustContentInsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerAdjustContentInsetTests.swift; sourceTree = "<group>"; };
-		4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAnimationInfo.swift; path = KeyboardAnimationInfo/KeyboardAnimationInfo.swift; sourceTree = "<group>"; };
 		4AB9A3E61CDFB9BB0021B6B8 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
-		4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAnimationInfoTests.swift; path = KeyboardAnimationInfoTests/KeyboardAnimationInfoTests.swift; sourceTree = "<group>"; };
-		4ABF787B1CE14C3F00F5B674 /* AnimationInfoHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationInfoHelpers.swift; path = KeyboardAnimationInfoTests/AnimationInfoHelpers.swift; sourceTree = "<group>"; };
+		4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAnimationInfoTests.swift; sourceTree = "<group>"; };
 		4AD7CB6F1CCC05B60006C1A5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		4AF13A8D215AD99400AB24B8 /* AnimationInfoHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationInfoHelpers.swift; sourceTree = "<group>"; };
+		4AF13A92215AD9AB00AB24B8 /* KeyboardAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAnimationInfo.swift; sourceTree = "<group>"; };
 		6E08D1FD1CCFAD6A00426439 /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		6EF706091DCB8654008BC0EB /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
+		973A20EFC2D80553F09659C7 /* Pods_MetovaBase_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetovaBase_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDFDAAF89EDCF097283DC52 /* Pods-MetovaBase-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaBase-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaBase-iOS/Pods-MetovaBase-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E6A6500A1DC03F27008B8D5C /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		E6A6500C1DC03FE5008B8D5C /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB89053F0AFFBDDF48120FB3 /* Pods_MetovaBase_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D7BE1CDD056FF2797AAB4D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				973A20EFC2D80553F09659C7 /* Pods_MetovaBase_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A11D7631CCAEBB900E4C363 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +113,8 @@
 				4A11D77D1CCAEC3400E4C363 /* MetovaBaseTests */,
 				4A8A5A431CCBE133005CB318 /* Related Files */,
 				4A11D7701CCAEC3400E4C363 /* Products */,
+				9E50D29775EC57D7919A9B8E /* Pods */,
+				1D7BE1CDD056FF2797AAB4D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +132,7 @@
 			children = (
 				4A11D78A1CCAF27800E4C363 /* MetovaBase.h */,
 				4A38463A1CCAFA0F00B7A2B6 /* BaseViewController */,
-				4A9640C41CD044860038E044 /* KeyboardAnimationInfo */,
+				4AF13A91215AD9AB00AB24B8 /* KeyboardAnimationInfo */,
 				4A11D78B1CCAF27800E4C363 /* Info.plist */,
 			);
 			path = MetovaBase;
@@ -128,7 +141,7 @@
 		4A11D77D1CCAEC3400E4C363 /* MetovaBaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				4ABF78771CE14BE700F5B674 /* KeyboardAnimationInfoTests */,
+				4AF13A8B215AD99400AB24B8 /* KeyboardAnimationInfoTests */,
 				4A66162B1CCBB96B0048EA51 /* BaseViewControllerTests */,
 				4A6616271CCBA6AB0048EA51 /* ObjectiveC */,
 				4A11D7801CCAEC3400E4C363 /* Info.plist */,
@@ -187,7 +200,6 @@
 				4A8A5A471CCBE275005CB318 /* .slather.yml */,
 				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
 				6E08D1FD1CCFAD6A00426439 /* .travis.yml */,
-				E6A6500C1DC03FE5008B8D5C /* .swift-version */,
 				4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */,
 				4A0315461CCE605300DDCB26 /* LICENSE */,
 				4AD7CB6F1CCC05B60006C1A5 /* Package.swift */,
@@ -199,21 +211,30 @@
 			name = "Related Files";
 			sourceTree = "<group>";
 		};
-		4A9640C41CD044860038E044 /* KeyboardAnimationInfo */ = {
-			isa = PBXGroup;
-			children = (
-				4A9640C51CD044A30038E044 /* KeyboardAnimationInfo.swift */,
-			);
-			name = KeyboardAnimationInfo;
-			sourceTree = "<group>";
-		};
-		4ABF78771CE14BE700F5B674 /* KeyboardAnimationInfoTests */ = {
+		4AF13A8B215AD99400AB24B8 /* KeyboardAnimationInfoTests */ = {
 			isa = PBXGroup;
 			children = (
 				4ABF78791CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift */,
-				4ABF787B1CE14C3F00F5B674 /* AnimationInfoHelpers.swift */,
+				4AF13A8D215AD99400AB24B8 /* AnimationInfoHelpers.swift */,
 			);
-			name = KeyboardAnimationInfoTests;
+			path = KeyboardAnimationInfoTests;
+			sourceTree = "<group>";
+		};
+		4AF13A91215AD9AB00AB24B8 /* KeyboardAnimationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4AF13A92215AD9AB00AB24B8 /* KeyboardAnimationInfo.swift */,
+			);
+			path = KeyboardAnimationInfo;
+			sourceTree = "<group>";
+		};
+		9E50D29775EC57D7919A9B8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFDAAF89EDCF097283DC52 /* Pods-MetovaBase-iOS.debug.xcconfig */,
+				2256F63A8D45F6187FCBD898 /* Pods-MetovaBase-iOS.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A11D7811CCAEC3400E4C363 /* Build configuration list for PBXNativeTarget "MetovaBase-iOS" */;
 			buildPhases = (
+				F1A2A5824941D5E5C6C6A195 /* [CP] Check Pods Manifest.lock */,
 				4A11D76A1CCAEC3400E4C363 /* Sources */,
 				4A11D76B1CCAEC3400E4C363 /* Frameworks */,
 				4A11D76C1CCAEC3400E4C363 /* Headers */,
@@ -276,16 +298,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Metova;
 				TargetAttributes = {
 					4A11D76E1CCAEC3400E4C363 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					4A11D7781CCAEC3400E4C363 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -312,7 +334,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A6500D1DC03FE5008B8D5C /* .swift-version in Resources */,
 				E6A6500B1DC03F27008B8D5C /* Gemfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect && swiftlint\nelse\n    cat << EOM\nerror: SwiftLint not installed.\n\nYou can install SwiftLint via Homebrew:\n\n$ brew update\n$ brew install swiftlint\n\nFor more information, visit https://github.com/realm/SwiftLint\nEOM\n    exit 1\nfi";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect && \"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		4A11D7881CCAF0BB00E4C363 /* TODO Warnings */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -369,6 +390,24 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbN=$(date +\"%s\")\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
 		};
+		F1A2A5824941D5E5C6C6A195 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetovaBase-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -379,7 +418,7 @@
 				4AED656B1CCD023100A70087 /* BaseViewController.swift in Sources */,
 				4AED656D1CCD023700A70087 /* BaseViewControllerKeyboard.swift in Sources */,
 				4AED656C1CCD023300A70087 /* KeyboardNotificationDelegate.swift in Sources */,
-				4A9640C61CD044A30038E044 /* KeyboardAnimationInfo.swift in Sources */,
+				4AF13A93215AD9AB00AB24B8 /* KeyboardAnimationInfo.swift in Sources */,
 				4AED656F1CCD024100A70087 /* BaseViewControllerConvenience.swift in Sources */,
 				4AED65701CCD024400A70087 /* BaseViewControllerFrames.swift in Sources */,
 			);
@@ -391,12 +430,12 @@
 			files = (
 				4AED65751CCD025900A70087 /* AssertNoException.swift in Sources */,
 				4AED65721CCD024B00A70087 /* BaseViewControllerAdjustContentInsetTests.swift in Sources */,
-				4ABF787C1CE14C3F00F5B674 /* AnimationInfoHelpers.swift in Sources */,
+				4AF13A97215ADBA900AB24B8 /* AnimationInfoHelpers.swift in Sources */,
 				4AED65661CCD021E00A70087 /* BaseViewControllerFramesTests.swift in Sources */,
 				4AED65731CCD024E00A70087 /* NotificationHelper.swift in Sources */,
 				4AED65651CCD021A00A70087 /* BaseViewControllerKeyboardNotificationTests.swift in Sources */,
 				4AED65711CCD024900A70087 /* BaseViewControllerFirstResponderTests.swift in Sources */,
-				4ABF787A1CE14C1700F5B674 /* KeyboardAnimationInfoTests.swift in Sources */,
+				4AF13A96215ADBA600AB24B8 /* KeyboardAnimationInfoTests.swift in Sources */,
 				4AED65741CCD025600A70087 /* ObjectiveCTry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,12 +454,18 @@
 		4A11D7681CCAEBB900E4C363 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -434,18 +479,25 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		4A11D7691CCAEBB900E4C363 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -458,11 +510,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		4A11D7821CCAEC3400E4C363 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEDFDAAF89EDCF097283DC52 /* Pods-MetovaBase-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -513,7 +567,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -522,6 +577,7 @@
 		};
 		4A11D7831CCAEC3400E4C363 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2256F63A8D45F6187FCBD898 /* Pods-MetovaBase-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -564,7 +620,8 @@
 				PRODUCT_NAME = MetovaBase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -619,7 +676,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "MetovaBaseTests/ObjectiveC/MetovaBaseTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -662,7 +720,8 @@
 				PRODUCT_NAME = MetovaBase;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "MetovaBaseTests/ObjectiveC/MetovaBaseTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
