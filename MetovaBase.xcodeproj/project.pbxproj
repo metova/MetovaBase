@@ -26,7 +26,6 @@
 		4AF13A97215ADBA900AB24B8 /* AnimationInfoHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF13A8D215AD99400AB24B8 /* AnimationInfoHelpers.swift */; };
 		AB89053F0AFFBDDF48120FB3 /* Pods_MetovaBase_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973A20EFC2D80553F09659C7 /* Pods_MetovaBase_iOS.framework */; };
 		E6A6500B1DC03F27008B8D5C /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = E6A6500A1DC03F27008B8D5C /* Gemfile */; };
-		E6A6500D1DC03FE5008B8D5C /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = E6A6500C1DC03FE5008B8D5C /* .swift-version */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +76,6 @@
 		973A20EFC2D80553F09659C7 /* Pods_MetovaBase_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetovaBase_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDFDAAF89EDCF097283DC52 /* Pods-MetovaBase-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetovaBase-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetovaBase-iOS/Pods-MetovaBase-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E6A6500A1DC03F27008B8D5C /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		E6A6500C1DC03FE5008B8D5C /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +200,6 @@
 				4A8A5A471CCBE275005CB318 /* .slather.yml */,
 				4A8A5A481CCBE275005CB318 /* .swiftlint.yml */,
 				6E08D1FD1CCFAD6A00426439 /* .travis.yml */,
-				E6A6500C1DC03FE5008B8D5C /* .swift-version */,
 				4AD7CB721CCC077F0006C1A5 /* CHANGELOG.md */,
 				4A0315461CCE605300DDCB26 /* LICENSE */,
 				4AD7CB6F1CCC05B60006C1A5 /* Package.swift */,
@@ -338,7 +335,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A6500D1DC03FE5008B8D5C /* .swift-version in Resources */,
 				E6A6500B1DC03F27008B8D5C /* Gemfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
