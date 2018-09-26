@@ -36,12 +36,12 @@ import UIKit
 public struct KeyboardAnimationInfo {
     
     private static let keyboardNotificationNames: [String] = [
-        Notification.Name.UIKeyboardWillShow.rawValue,
-        Notification.Name.UIKeyboardDidShow.rawValue,
-        Notification.Name.UIKeyboardWillHide.rawValue,
-        Notification.Name.UIKeyboardDidHide.rawValue,
-        Notification.Name.UIKeyboardWillChangeFrame.rawValue,
-        Notification.Name.UIKeyboardDidChangeFrame.rawValue
+        UIResponder.keyboardWillShowNotification.rawValue,
+        UIResponder.keyboardDidShowNotification.rawValue,
+        UIResponder.keyboardWillHideNotification.rawValue,
+        UIResponder.keyboardDidHideNotification.rawValue,
+        UIResponder.keyboardWillChangeFrameNotification.rawValue,
+        UIResponder.keyboardDidChangeFrameNotification.rawValue
     ]
     
     /// Identifies the start frame of the keyboard in screen coordinates. These coordinates do not take into account any rotation factors applied to the window’s contents as a result of interface orientation changes. Thus, you may need to convert the rectangle to window coordinates (using the `convertRect:fromWindow:` method) or to view coordinates (using the `convertRect:fromView:` method) before using it.  This is equivalent to the value found in the user info dictionar under the `UIKeyboardFrameBeginserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
@@ -54,7 +54,7 @@ public struct KeyboardAnimationInfo {
     public let animationDuration: TimeInterval
     
     /// Defines how the keyboard will be animated onto or off the screen.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardAnimationCurveUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
-    public let animationCurve: UIViewAnimationCurve
+    public let animationCurve: UIView.AnimationCurve
     
     /// Identifies whether the keyboard belongs to the current app. With multitasking on iPad, all visible apps are notified when the keyboard appears and disappears. The value of this property is `true` for the app that caused the keyboard to appear and `false` for any other apps.  This is equivalent to the value found in the user info dictionary under the `UIKeyboardIsLocalUserInfoKey` key.  For more information, see [Keyboard Notification User Info Keys](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWindow_Class/index.html#//apple_ref/doc/constant_group/Keyboard_Notification_User_Info_Keys).
     @available (iOS 9.0, *)
@@ -80,34 +80,34 @@ public struct KeyboardAnimationInfo {
             return nil
         }
         
-        guard let startFrame = animationInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect else {
+        guard let startFrame = animationInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect else {
             return nil
         }
         
         self.startFrame = startFrame
         
-        guard let endFrame = animationInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else {
+        guard let endFrame = animationInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
             return nil
         }
         
         self.endFrame = endFrame
         
-        guard let animationDuration = animationInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else {
+        guard let animationDuration = animationInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else {
             return nil
         }
         
         self.animationDuration = animationDuration
         
         guard let
-            animationCurveRaw = animationInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
-            let animationCurve = UIViewAnimationCurve(rawValue: animationCurveRaw) else {
+            animationCurveRaw = animationInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int,
+            let animationCurve = UIView.AnimationCurve(rawValue: animationCurveRaw) else {
                 return nil
         }
         
         self.animationCurve = animationCurve
         
         if #available(iOS 9.0, *) {
-            guard let isLocalUser = animationInfo[UIKeyboardIsLocalUserInfoKey] as? Bool else {
+            guard let isLocalUser = animationInfo[UIResponder.keyboardIsLocalUserInfoKey] as? Bool else {
                 return nil
             }
             

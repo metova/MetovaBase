@@ -30,30 +30,30 @@
 import UIKit
 
 func keyboardFrameBeginNotificationNoUserInfo() -> Notification {
-    return Notification(name: Notification.Name(rawValue: UIKeyboardFrameBeginUserInfoKey), object: nil)
+    return Notification(name: Notification.Name(rawValue: UIResponder.keyboardFrameBeginUserInfoKey), object: nil)
 }
 
 func keyboardFrameEndNotificationNoUserInfo() -> Notification {
-    return Notification(name: Notification.Name(rawValue: UIKeyboardFrameEndUserInfoKey), object: nil)
+    return Notification(name: Notification.Name(rawValue: UIResponder.keyboardFrameEndUserInfoKey), object: nil)
 }
 
 func keyboardFrameBeginNotification(beginFrame: CGRect?, endFrame: CGRect?) -> Notification {
-    return frame(withNotificationName: UIKeyboardFrameBeginUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
+    return frame(withNotificationName: UIResponder.keyboardFrameBeginUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
 }
 
 func keyboardFrameEndNotification(beginFrame: CGRect?, endFrame: CGRect?) -> Notification {
-    return frame(withNotificationName: UIKeyboardFrameEndUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
+    return frame(withNotificationName: UIResponder.keyboardFrameEndUserInfoKey, beginFrame: beginFrame, endFrame: endFrame)
 }
 
 private func frame(withNotificationName name: String, beginFrame: CGRect?, endFrame: CGRect?) -> Notification {
     var userInfo = [String: AnyObject]()
     
     if let beginFrame = beginFrame {
-        userInfo[UIKeyboardFrameBeginUserInfoKey] = NSValue(cgRect: beginFrame)
+        userInfo[UIResponder.keyboardFrameBeginUserInfoKey] = NSValue(cgRect: beginFrame)
     }
     
     if let endFrame = endFrame {
-        userInfo[UIKeyboardFrameEndUserInfoKey] = NSValue(cgRect: endFrame)
+        userInfo[UIResponder.keyboardFrameEndUserInfoKey] = NSValue(cgRect: endFrame)
     }
     
     return Notification(name: Notification.Name(rawValue: name), object: nil, userInfo: userInfo)
