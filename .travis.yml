@@ -6,9 +6,9 @@ env:
   - LANG=en_US.UTF-8
   - PROJECT=MetovaBase.xcodeproj
   - IOS_FRAMEWORK_SCHEME="MetovaBase-iOS"
-  - IOS_SDK=iphonesimulator11.0
+  - IOS_SDK=iphonesimulator12.0
   matrix:
-    - DESTINATION="OS=11.0,name=iPhone 7"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
+    - DESTINATION="OS=12.0,name=iPhone 8"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
 before_install:
   - rvm use 2.3.0
 install:
